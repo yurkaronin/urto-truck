@@ -116,14 +116,13 @@ input[type=radio].visually-hidden {
   justify-content: center;
   background-color: transparent;
 }
+.button-menu .button-menu {
+  display: none;
+  position: relative;
+  z-index: 20;
+}
 .button-menu svg {
   flex-shrink: 0;
-}
-.button-menu__off {
-  display: block;
-}
-.button-menu__on {
-  display: none;
 }
 
 .header {

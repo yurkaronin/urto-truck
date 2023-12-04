@@ -1,4 +1,9 @@
 .button-menu {
+  .button-menu {
+    display: none;
+    position: relative;
+    z-index: 20;
+}
   border: none;
   display: flex;
   align-items: center;
@@ -7,11 +12,5 @@
 
   svg {
     flex-shrink: 0;
-  }
-  &__off {
-    display: block;
-  }
-  &__on {
-    display: none;
   }
 }
