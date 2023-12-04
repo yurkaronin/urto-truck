@@ -1,0 +1,20 @@
+/* Стилизация для всей полосы прокрутки */
+::-webkit-scrollbar {
+  width: 3px; /* ширина полосы прокрутки */
+  border-radius: 4.5px;
+}
+
+/* Стилизация дорожки прокрутки */
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1; /* цвет фона дорожки */
+// }
+
+/* Стилизация бегунка прокрутки */
+::-webkit-scrollbar-thumb {
+  background: var(--DarkGreen); /* зеленый цвет бегунка */
+}
+
+/* Стилизация бегунка прокрутки при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--VibrantGreen); /* более темный оттенок зеленого при наведении */
+}

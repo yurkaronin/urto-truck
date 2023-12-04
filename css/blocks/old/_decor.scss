@@ -1,0 +1,46 @@
+.decor {
+  position: relative;
+
+  &--one::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 722px;
+    height: 722px;
+    margin-left: -361px; // половина ширины элемента
+    border-radius: 722px;
+    background: #a8f1ca;
+    filter: blur(150px);
+    pointer-events: none;
+  }
+  &--two::before {
+    content: "";
+    z-index: 0;
+    display: block;
+    border-radius: 722px;
+    background: #c8f1a8;
+    filter: blur(150px);
+    width: 722px;
+    height: 722px;
+    margin-left: -361px; // половина ширины элемента
+    position: absolute;
+    top: 40%;
+    right: 35%;
+  }
+  &--two::after {
+    content: "";
+    z-index: 0;
+    display: block;
+    border-radius: 273px;
+    background: #a8f1ca;
+    filter: blur(150px);
+    width: 272px;
+    height: 273px;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+  }
+
+}

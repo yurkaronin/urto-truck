@@ -1,0 +1,17 @@
+.map {
+  height: 785px;
+  position: relative;
+  margin-bottom: 13px;
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    height: 785px;
+    width: 100%;
+}
+
+  [class*="copyrights-pane"] {
+    display: none !important;
+  }
+
+}

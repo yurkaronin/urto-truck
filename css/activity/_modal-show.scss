@@ -1,0 +1,11 @@
+.modal {
+  pointer-events: initial;
+  visibility: hidden; /* Скрыть все модалки по умолчанию */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s; /* Плавный переход для видимости и прозрачности */
+}
+
+.modal.active {
+  visibility: visible; /* Показать активную модалку */
+  opacity: 1;
+}

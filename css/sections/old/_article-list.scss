@@ -1,0 +1,24 @@
+.article-list {
+  &__grid {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 140px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+
+  }
+  @media (max-width: 1024px) {
+    &__grid {
+      gap: 64px 30px;
+    }
+  }
+
+  @media (max-width:768px) {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 32px;
+    }
+  }
+}

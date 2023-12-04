@@ -1,0 +1,17 @@
+.button-menu {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+  svg {
+    flex-shrink: 0;
+  }
+  &__off {
+    display: block;
+  }
+  &__on {
+    display: none;
+  }
+}

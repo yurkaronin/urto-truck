@@ -1,0 +1,43 @@
+.accordion {
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    &::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.7634 1.73149L7.44086 7.33148C7.18717 7.55617 6.81283 7.55617 6.55914 7.33148L0.236573 1.73149C-0.0474851 1.4799 -0.0803821 1.03799 0.163097 0.744459C0.406575 0.450932 0.83423 0.416938 1.11829 0.668533L7 5.87805L12.8817 0.668533C13.1658 0.416938 13.5934 0.450932 13.8369 0.744459C14.0804 1.03799 14.0475 1.4799 13.7634 1.73149Z' fill='%23006634'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 14px;
+      transition: all 0.3s;
+      margin-right: 28px;
+    }
+  }
+  &__body {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-left: 60px;
+    max-width: 245px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  &__title.active::before {
+    transform: rotate(180deg); // Поворачивает стрелку на 180 градусов
+  }
+  .active + &__body {
+    margin-bottom: 25px;
+  }
+}

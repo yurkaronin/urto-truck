@@ -1,0 +1,8 @@
+.text {
+  margin-top: 0;
+  font-weight: 300;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,14 @@
+.menu-open {
+  overflow: hidden;
+  .header-mobile__navigation {
+    opacity: 1;
+    visibility: initial;
+    pointer-events: initial;
+  }
+  .button-menu__off {
+    display: none;
+  }
+  .button-menu__on {
+    display: block;
+  }
+}

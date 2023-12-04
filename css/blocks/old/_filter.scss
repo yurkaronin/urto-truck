@@ -1,0 +1,112 @@
+.filter {
+  &__group {
+    border-radius: 10px;
+    background-color: var(--White);
+    padding: 30px 30px;
+    border: none;
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  &__name {
+    display: block;
+    margin: 0;
+    font-family: var(--Font-1);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 42px;
+    position: relative;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__group--checkbox {
+    .filter__label {
+      font-family: var(--Font-1);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: calc(28px + 30px);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    input[type="checkbox"] + label::before {
+      background-image: url(../img/icons/checkbox-off-1.svg);
+    }
+
+    input[type="radio"] + label::before {
+      background-image: url(../img/icons/radio-off-1.svg);
+    }
+
+    input[type="checkbox"]:checked + label::before,
+    input[type="radio"]:checked + label::before {
+      background-image: url(../img/icons/checkbox-on-1.svg);
+    }
+
+    input[type="checkbox"]:checked + label::before {
+      background-image: url(../img/icons/checkbox-on-1.svg);
+    }
+
+    input[type="radio"]:checked + label::before {
+      width: 30px;
+      background-image: url(../img/icons/radio-on-1.svg);
+    }
+
+    input[type="radio"]:disabled + label::before,
+    input[type="checkbox"]:disabled + label::before {
+      opacity: 0.25;
+    }
+    input[type="radio"]:disabled + label,
+    input[type="checkbox"]:disabled + label {
+      color: #a6a6a6;
+    }
+  }
+
+  &__group--tags {
+    .filter__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter__label {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      max-width: max-content;
+      color: var(--DarkGreen);
+      font-family: var(--Font-1);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.1;
+      padding: 5px 10px;
+      border-radius: 3px;
+      background-color: #E5EBE0;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    input[type="checkbox"]:checked + label,
+    input[type="radio"]:checked + label {
+      background-color: var(--DarkGreen);
+      color: var(--White);
+    }
+  }
+}

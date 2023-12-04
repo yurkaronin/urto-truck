@@ -1,0 +1,9 @@
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 165px;
+  gap: 20px;
+}

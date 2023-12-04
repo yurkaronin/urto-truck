@@ -1,0 +1,52 @@
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  outline: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--DarkGreen);
+  padding: 20px 24px;
+  flex-shrink: 0;
+
+  color: var(--White);
+  font-family: var(--Font-1);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--VibrantGreen);
+    color: var(--White);
+  }
+
+  &--icon-left {
+    text-align: initial;
+
+    svg {
+      margin-right: 30px;
+    }
+  }
+  &--number {
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  &--mod {
+    background-color: var(--SoftGreenGray);
+    color: var(--DarkGreen);
+  }
+
+  @media (max-width: 767px) {}
+}
+
+

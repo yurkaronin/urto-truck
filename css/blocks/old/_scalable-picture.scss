@@ -1,0 +1,11 @@
+.scalable-picture {
+  overflow: visible;
+
+  img {
+    transition: all .7s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}

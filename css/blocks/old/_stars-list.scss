@@ -1,0 +1,8 @@
+.stars-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(5, 22px);
+}

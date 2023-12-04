@@ -1,0 +1,22 @@
+.catalog-directions {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1750px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
