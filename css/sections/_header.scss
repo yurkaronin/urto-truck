@@ -1,8 +1,8 @@
 .header {
   background-color: var(--White);
   &__top {
-    padding-top: 14px;
-    padding-bottom: 13px;
+    padding-top: 18px;
+    padding-bottom: 11px;
     border-bottom: 1px solid;
     border-color: var(--LightGray);
   }
@@ -19,11 +19,17 @@
   }
   &__logo-link {
     text-decoration: none;
-  }
-  &__logo-image {
-    display: block;
     max-width: 162px;
+    path {
+      transition: all 0.3s;
+    }
+    &:hover {
+      path {
+        fill: var(--Over);
+      }
+    }
   }
+
   &__logo-text {
     display: block;
     margin-left: 14px;
@@ -62,9 +68,30 @@
       text-transform: uppercase;
     }
   }
+  &__contacts-link {
+    transition: all 0.3s;
+    .--phone {
+      path {
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      span {
+        color: var(--Over);
+      }
+      &.--phone {
+        path {
+          fill: var(--Over);
+        }
+      }
+    }
+  }
   &__contacts-link:has(span) {
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+  .button-menu {
+    display: none;
   }
 }

@@ -20,7 +20,7 @@
 // @import "blocks/swiper";
 // @import "blocks/custom-map";
 // @import "blocks/direction-card";
-// @import "blocks/main-navigation";
+@import "blocks/navigation";
 // @import "blocks/main";
 // @import "blocks/content-with-sidebar";
 // @import "blocks/accordion";
@@ -76,3 +76,11 @@
 // @import "activity/menu-open";
 // @import "activity/header-sticky";
 // @import "activity/header-search-active";
+
+
+.scale {
+  transition: 0.6s; /* Время эффекта */
+ }
+ .scale:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+ }
