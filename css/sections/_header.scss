@@ -94,4 +94,50 @@
   .button-menu {
     display: none;
   }
+  .mobile-contacts {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    &__logo {
+      max-width: 450px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__top {
+      padding-top: 12px;
+    }
+    &__logo {
+      max-width: initial;
+    }
+    &__logo-text {
+      display: none;
+    }
+    &__contacts-link span {
+      display: none;
+    }
+    .button-menu {
+      display: flex;
+      margin-left: 20px;
+    }
+    &__contacts-list {
+      gap: 20px;
+    }
+    &__contacts-link:has(span) {
+      display: block;
+    }
+    &__contacts-list svg {
+      width: 25px;
+      height: 25px;
+    }
+    &__logo-link {
+      max-width: 162px;
+      display: block;
+      height: 21px;
+    }
+    .mobile-contacts {
+      display: block;
+    }
+  }
 }

@@ -1,0 +1,34 @@
+.mobile-contacts {
+  padding-inline: 20px;
+  padding-top: 32px;
+  margin-bottom: 32px;
+  &__label {
+    position: relative;
+    display: flex;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--Inter);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    &::before {
+      content: "";
+      display: block;
+      width: 26px;
+      height: 26px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.90204 17.098C14.5102 22.7061 19.8664 23.8922 21.8429 24C23.1065 22.149 23.6402 20.6208 24 19.2551C22.6338 17.9248 20.6458 16.5679 18.8235 15.8041L16.6663 17.9607C15.9296 17.7634 13.9073 16.9272 11.4903 14.5097C9.07282 12.0922 8.23662 10.0704 8.03929 9.33368L10.1959 7.17653C9.43209 5.35418 8.07521 3.36625 6.74489 2C5.37864 2.35926 3.85099 2.89348 2 4.15715C2.10778 6.13415 3.29439 11.4898 8.90204 17.098Z' stroke='%23EC3C3C' stroke-width='2' stroke-miterlimit='10'/%3e%3c/svg%3e ");
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 9px;
+    }
+  }
+  &__link {
+    display: block;
+    color: var(--White);
+    font-family: var(--Exo);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+}

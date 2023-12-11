@@ -32,15 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //   headerChange();
   //   window.addEventListener("scroll", onScroll, { passive: true });
 
-  //   // показ мобильного меню и кнопки
-  //   const buttonMenu = document.querySelector('.button-menu');
-  //   // const navigation = document.querySelector('.navigation');
-  //   buttonMenu.addEventListener('click', function () {
-  //     buttonMenu.classList.toggle('isActive');
-  //     // navigation.classList.toggle('isActive');
-  //     document.body.classList.toggle('menu-open');
-  //   });
-
   // показ мобильного меню и кнопки
   const buttonMenu = document.querySelector('.button-menu');
   // const navigation = document.querySelector('.navigation');
@@ -52,13 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // Гибридный аккордеон в мобильном меню
-  if (document.documentElement.clientWidth <= 1750) {
+  if (document.documentElement.clientWidth <= 767) {
     // Поиск всех элементов с классом 'main-navigation__item'
-    const menuItems = document.querySelectorAll('.main-navigation__item');
+    const menuItems = document.querySelectorAll('.navigation__item');
 
     menuItems.forEach(item => {
-      const link = item.querySelector('.main-navigation__link');
-      const sublist = item.querySelector('.main-navigation__sublist');
+      const link = item.querySelector('.navigation__link');
+      const sublist = item.querySelector('.navigation__sub-list');
 
       // Проверка, содержит ли элемент списка подсписок
       if (sublist) {
@@ -73,182 +64,182 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   };
-  // простые табы в карточке товара
-  const tabs = document.querySelectorAll(".tabs__link");
-  const contents = document.querySelectorAll(".tabs__details");
+  // // простые табы в карточке товара
+  // const tabs = document.querySelectorAll(".tabs__link");
+  // const contents = document.querySelectorAll(".tabs__details");
 
-  // Проверяем, есть ли вкладки на странице
-  if (tabs.length > 0 && contents.length > 0) {
-    // Функция для активации вкладки и ее содержимого
-    function activateTab(tab) {
-      const activeTab = tab.getAttribute('data-tab');
+  // // Проверяем, есть ли вкладки на странице
+  // if (tabs.length > 0 && contents.length > 0) {
+  //   // Функция для активации вкладки и ее содержимого
+  //   function activateTab(tab) {
+  //     const activeTab = tab.getAttribute('data-tab');
 
-      // Удаляем активный класс со всех вкладок и содержимого
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+  //     // Удаляем активный класс со всех вкладок и содержимого
+  //     tabs.forEach(t => t.classList.remove('active'));
+  //     contents.forEach(c => c.classList.remove('active'));
 
-      // Добавляем активный класс выбранной вкладке и соответствующему содержимому
-      tab.classList.add('active');
-      document.querySelector(`.tabs__details[data-content="${activeTab}"]`).classList.add('active');
-    }
+  //     // Добавляем активный класс выбранной вкладке и соответствующему содержимому
+  //     tab.classList.add('active');
+  //     document.querySelector(`.tabs__details[data-content="${activeTab}"]`).classList.add('active');
+  //   }
 
-    // Назначаем обработчики кликов
-    tabs.forEach(tab => {
-      tab.addEventListener("click", function (event) {
-        event.preventDefault();
-        activateTab(this);
-      });
-    });
+  //   // Назначаем обработчики кликов
+  //   tabs.forEach(tab => {
+  //     tab.addEventListener("click", function (event) {
+  //       event.preventDefault();
+  //       activateTab(this);
+  //     });
+  //   });
 
-    // Активируем первую вкладку и ее содержимое по умолчанию
-    activateTab(tabs[0]);
-  }
+  //   // Активируем первую вкладку и ее содержимое по умолчанию
+  //   activateTab(tabs[0]);
+  // }
 
-  //   // слайдер с логотипами
-  if (document.querySelector('.home-screen__slider .mySwiper')) {
-    console.log('Домашний слайдер есть!');
-    var homeScreenSwiper = new Swiper(".home-screen__slider .mySwiper", {
-      pagination: {
-        el: ".home-screen__slider .swiper-pagination",
-      },
-    });
-  };
+  // //   // слайдер с логотипами
+  // if (document.querySelector('.home-screen__slider .mySwiper')) {
+  //   console.log('Домашний слайдер есть!');
+  //   var homeScreenSwiper = new Swiper(".home-screen__slider .mySwiper", {
+  //     pagination: {
+  //       el: ".home-screen__slider .swiper-pagination",
+  //     },
+  //   });
+  // };
 
-  //   // слайдер c карточками
-  if (document.querySelector('#card-slider-1 .mySwiper')) {
-    console.log('Слайдер с карточками есть!');
-    var homeScreenSwiper = new Swiper("#card-slider-1 .mySwiper", {
-      slidesPerView: 2,
-      spaceBetween: 25,
-      breakpoints: {
-        // when window width is >= 320px
-        425: {
-          slidesPerView: 1
-        },
-        // // when window width is >= 480px
-        // 767: {
-        //   slidesPerView: 2
-        // },
-        // 1023: {
-        //   slidesPerView: 3
-        // },
-        // 1279: {
-        //   slidesPerView: 4
-        // },
-        // when window width is >= 640px
-        1750: {
-          slidesPerView: 1
-        }
-      }
-    });
-  };
+  // //   // слайдер c карточками
+  // if (document.querySelector('#card-slider-1 .mySwiper')) {
+  //   console.log('Слайдер с карточками есть!');
+  //   var homeScreenSwiper = new Swiper("#card-slider-1 .mySwiper", {
+  //     slidesPerView: 2,
+  //     spaceBetween: 25,
+  //     breakpoints: {
+  //       // when window width is >= 320px
+  //       425: {
+  //         slidesPerView: 1
+  //       },
+  //       // // when window width is >= 480px
+  //       // 767: {
+  //       //   slidesPerView: 2
+  //       // },
+  //       // 1023: {
+  //       //   slidesPerView: 3
+  //       // },
+  //       // 1279: {
+  //       //   slidesPerView: 4
+  //       // },
+  //       // when window width is >= 640px
+  //       1750: {
+  //         slidesPerView: 1
+  //       }
+  //     }
+  //   });
+  // };
 
-  //   // слайдер со статьями в карточке товара
-  if (document.querySelector('.product__articles-slider .mySwiper')) {
-    console.log('Слайдер со статьями в карточке товара есть!');
-    var productArticlesSlider = new Swiper(".product__articles-slider .mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 25,
-      navigation: {
-        nextEl: ".product__articles-slider .swiper-button-next",
-        prevEl: ".product__articles-slider .swiper-button-prev",
-      },
-    });
-  };
+  // //   // слайдер со статьями в карточке товара
+  // if (document.querySelector('.product__articles-slider .mySwiper')) {
+  //   console.log('Слайдер со статьями в карточке товара есть!');
+  //   var productArticlesSlider = new Swiper(".product__articles-slider .mySwiper", {
+  //     slidesPerView: 1,
+  //     spaceBetween: 25,
+  //     navigation: {
+  //       nextEl: ".product__articles-slider .swiper-button-next",
+  //       prevEl: ".product__articles-slider .swiper-button-prev",
+  //     },
+  //   });
+  // };
 
-  //   // слайдер со статьями
-  if (document.querySelector('#card-slider-2 .mySwiper')) {
-    console.log('Слайдер со статьями есть!');
-    var homeScreenSwiper = new Swiper("#card-slider-2 .mySwiper", {
-      slidesPerView: 2,
-      spaceBetween: 25,
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1.2
-        },
-        // // when window width is >= 480px
-        // 767: {
-        //   slidesPerView: 2
-        // },
-        // 1023: {
-        //   slidesPerView: 3
-        // },
-        // 1279: {
-        //   slidesPerView: 4
-        // },
-        // when window width is >= 640px
-        1750: {
-          slidesPerView: 1.2
-        }
-      }
-    });
-  };
+  // //   // слайдер со статьями
+  // if (document.querySelector('#card-slider-2 .mySwiper')) {
+  //   console.log('Слайдер со статьями есть!');
+  //   var homeScreenSwiper = new Swiper("#card-slider-2 .mySwiper", {
+  //     slidesPerView: 2,
+  //     spaceBetween: 25,
+  //     breakpoints: {
+  //       // when window width is >= 320px
+  //       320: {
+  //         slidesPerView: 1.2
+  //       },
+  //       // // when window width is >= 480px
+  //       // 767: {
+  //       //   slidesPerView: 2
+  //       // },
+  //       // 1023: {
+  //       //   slidesPerView: 3
+  //       // },
+  //       // 1279: {
+  //       //   slidesPerView: 4
+  //       // },
+  //       // when window width is >= 640px
+  //       1750: {
+  //         slidesPerView: 1.2
+  //       }
+  //     }
+  //   });
+  // };
 
-  //   // слайдер c отзывами
-  if (document.querySelector('.reviews .mySwiper')) {
-    console.log('Слайдер с отзывами есть!');
-    var homeScreenSwiper = new Swiper(".reviews .mySwiper", {
-      slidesPerView: 2.3,
-      spaceBetween: 25,
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1
-        },
-        // // when window width is >= 480px
-        // 767: {
-        //   slidesPerView: 2
-        // },
-        // 1023: {
-        //   slidesPerView: 3
-        // },
-        768: {
-          slidesPerView: 1.2
-        },
-        // when window width is >= 640px
-        1750: {
-          slidesPerView: 2.3
-        }
-      }
-    });
-  };
+  // //   // слайдер c отзывами
+  // if (document.querySelector('.reviews .mySwiper')) {
+  //   console.log('Слайдер с отзывами есть!');
+  //   var homeScreenSwiper = new Swiper(".reviews .mySwiper", {
+  //     slidesPerView: 2.3,
+  //     spaceBetween: 25,
+  //     breakpoints: {
+  //       // when window width is >= 320px
+  //       320: {
+  //         slidesPerView: 1
+  //       },
+  //       // // when window width is >= 480px
+  //       // 767: {
+  //       //   slidesPerView: 2
+  //       // },
+  //       // 1023: {
+  //       //   slidesPerView: 3
+  //       // },
+  //       768: {
+  //         slidesPerView: 1.2
+  //       },
+  //       // when window width is >= 640px
+  //       1750: {
+  //         slidesPerView: 2.3
+  //       }
+  //     }
+  //   });
+  // };
 
-  //   // слайдер c документами
-  if (document.querySelector('.docs .mySwiper')) {
-    console.log('Слайдер с документами есть!');
-    var homeScreenSwiper = new Swiper(".docs .mySwiper", {
-      slidesPerView: 4,
-      spaceBetween: 80,
-      navigation: {
-        nextEl: ".docs .swiper-button-next",
-        prevEl: ".docs .swiper-button-prev",
-      },
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1.5,
-          spaceBetween: 40
-        },
-        // // when window width is >= 480px
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 80
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        // 1279: {
-        //   slidesPerView: 4
-        // },
-        // when window width is >= 640px
-        1750: {
-          slidesPerView: 4
-        }
-      }
+  // //   // слайдер c документами
+  // if (document.querySelector('.docs .mySwiper')) {
+  //   console.log('Слайдер с документами есть!');
+  //   var homeScreenSwiper = new Swiper(".docs .mySwiper", {
+  //     slidesPerView: 4,
+  //     spaceBetween: 80,
+  //     navigation: {
+  //       nextEl: ".docs .swiper-button-next",
+  //       prevEl: ".docs .swiper-button-prev",
+  //     },
+  //     breakpoints: {
+  //       // when window width is >= 320px
+  //       320: {
+  //         slidesPerView: 1.5,
+  //         spaceBetween: 40
+  //       },
+  //       // // when window width is >= 480px
+  //       768: {
+  //         slidesPerView: 2,
+  //         spaceBetween: 80
+  //       },
+  //       1024: {
+  //         slidesPerView: 3,
+  //       },
+  //       // 1279: {
+  //       //   slidesPerView: 4
+  //       // },
+  //       // when window width is >= 640px
+  //       1750: {
+  //         slidesPerView: 4
+  //       }
+  //     }
 
-    });
-  };
+  //   });
+  // };
 
   //   // слайдер с логотипами
   //   if (document.querySelector('.customers .mySwiper')) {

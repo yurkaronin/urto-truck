@@ -1,16 +1,50 @@
 .button-menu {
-  .button-menu {
-    display: none;
-    position: relative;
-    z-index: 20;
-}
-  border: none;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  cursor: pointer;
+  background-color: var(--Red);
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  max-width: initial;
+  max-height: initial;
+  min-height: initial;
+  // border-radius: 50px;
+  flex-shrink: 0;
 
-  svg {
-    flex-shrink: 0;
+  &::before {
+    display: none;
+  }
+  & span,
+  & span::after,
+  & span::before {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: var(--White);
+  }
+  & span::after,
+  & span::before {
+    content: "";
+    display: block;
+    transition: 0.3s;
+  }
+  & span::before {
+    transform: translateY(-6px);
+  }
+  & span::after {
+    transform: translateY(6px);
+  }
+  &.isActive span {
+    height: 0;
+  }
+  &.isActive span:before {
+    transform: rotate(-45deg);
+  }
+  &.isActive span:after {
+    transform: rotate(45deg);
   }
 }
