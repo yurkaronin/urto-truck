@@ -1,10 +1,19 @@
 .header {
   background-color: var(--White);
+  transition: all 0.6s;
+  position: fixed;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.4s;
+
   &__top {
     padding-top: 18px;
     padding-bottom: 11px;
     border-bottom: 1px solid;
     border-color: var(--LightGray);
+    transition: all 0.4s;
   }
   &__flex {
     align-items: center;
