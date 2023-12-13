@@ -95,16 +95,39 @@ document.addEventListener("DOMContentLoaded", () => {
   //   activateTab(tabs[0]);
   // }
 
-  // hero slider
-  if (document.querySelector('.hero-slider')) {
-    console.log('hero slider ЕСТЬ!');
-    var swiperHero = new Swiper(".hero-slider .swiper", {
-      navigation: {
-        nextEl: ".hero-slider .swiper-button-next",
-        prevEl: ".hero-slider .swiper-button-prev",
-      },
-    });
-  };
+  // Инициализация миниатюрного слайдера
+  var swiperThumbs = new Swiper('.hero-slider__thumbs', {
+    // Общие параметры
+    slidesPerView: 4,
+    spaceBetween: 0,
+    freeMode: true,
+    watchSlidesProgress: true,
+    autoHeight: true,
+    // Параметры для разных точек останова
+    breakpoints: {
+      // Когда ширина экрана меньше или равна 1023px
+      1023: {
+        direction: 'horizontal', // Горизонтальная ориентация
+        autoHeight: false,
+        slidesPerView: 'auto', // Автоматическое определение количества слайдов
+      }
+    }
+  });
+
+
+  // Инициализация основного слайдера
+  var swiperHero = new Swiper(".hero-slider .swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".hero-slider .swiper-button-next",
+      prevEl: ".hero-slider .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiperThumbs
+    }
+  });
+
+
 
   // //   // слайдер с логотипами
   // if (document.querySelector('.home-screen__slider .mySwiper')) {
