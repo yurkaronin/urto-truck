@@ -29,8 +29,8 @@ function requestTick() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    headerChange();
-    window.addEventListener("scroll", onScroll, { passive: true });
+  headerChange();
+  window.addEventListener("scroll", onScroll, { passive: true });
 
   // показ мобильного меню и кнопки
   const buttonMenu = document.querySelector('.button-menu');
@@ -94,6 +94,17 @@ document.addEventListener("DOMContentLoaded", () => {
   //   // Активируем первую вкладку и ее содержимое по умолчанию
   //   activateTab(tabs[0]);
   // }
+
+  // hero slider
+  if (document.querySelector('.hero-slider')) {
+    console.log('hero slider ЕСТЬ!');
+    var swiperHero = new Swiper(".hero-slider .swiper", {
+      navigation: {
+        nextEl: ".hero-slider .swiper-button-next",
+        prevEl: ".hero-slider .swiper-button-prev",
+      },
+    });
+  };
 
   // //   // слайдер с логотипами
   // if (document.querySelector('.home-screen__slider .mySwiper')) {
