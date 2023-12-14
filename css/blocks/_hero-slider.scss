@@ -1,4 +1,6 @@
 .hero-slider {
+  position: relative;
+
   &__image {
     display: block;
     width: 100%;
@@ -19,8 +21,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    min-height: calc(100vh - 105px);
-    margin-top: 105px;
+    height: 100vh;
     position: relative;
     z-index: 2;
     padding-bottom: 170px;
@@ -64,12 +65,12 @@
   }
   &__aside {
     position: absolute;
-    top: 105px;
     left: 0;
+    top: 0;
     z-index: 10;
     width: 100%;
     max-width: 96px;
-    height: calc(100% - 105px);
+    height: 100vh;
     background-color: var(--Dark);
     display: flex;
     flex-direction: column;
@@ -119,6 +120,12 @@
       padding-top: 32px;
     }
   }
+  @media (max-width: 1279px) {
+    &__aside {
+
+    }
+
+  }
   @media (max-width: 1023px) {
     &__aside {
       top: auto;
@@ -145,7 +152,7 @@
       transform: rotate(-90deg);
     }
     &__flex {
-      min-height: 650px;
+      height: initial;
     }
     &__title {
       font-size: 56px;
@@ -154,7 +161,8 @@
   @media (max-width: 767px) {
     background-color: var(--Black);
     color: var(--White);
-    top: 56px;
+    top: initial;
+    // margin-top: 56px;
     &__flex {
       margin: 0;
       min-height: initial;

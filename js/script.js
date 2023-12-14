@@ -64,39 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   };
-  // // простые табы в карточке товара
-  // const tabs = document.querySelectorAll(".tabs__link");
-  // const contents = document.querySelectorAll(".tabs__details");
-
-  // // Проверяем, есть ли вкладки на странице
-  // if (tabs.length > 0 && contents.length > 0) {
-  //   // Функция для активации вкладки и ее содержимого
-  //   function activateTab(tab) {
-  //     const activeTab = tab.getAttribute('data-tab');
-
-  //     // Удаляем активный класс со всех вкладок и содержимого
-  //     tabs.forEach(t => t.classList.remove('active'));
-  //     contents.forEach(c => c.classList.remove('active'));
-
-  //     // Добавляем активный класс выбранной вкладке и соответствующему содержимому
-  //     tab.classList.add('active');
-  //     document.querySelector(`.tabs__details[data-content="${activeTab}"]`).classList.add('active');
-  //   }
-
-  //   // Назначаем обработчики кликов
-  //   tabs.forEach(tab => {
-  //     tab.addEventListener("click", function (event) {
-  //       event.preventDefault();
-  //       activateTab(this);
-  //     });
-  //   });
-
-  //   // Активируем первую вкладку и ее содержимое по умолчанию
-  //   activateTab(tabs[0]);
-  // }
 
   // Инициализация миниатюрного слайдера
-  var swiperThumbs = new Swiper('.hero-slider__thumbs', {
+  var swiperThumbs = new Swiper('.hero-home__thumbs', {
     // Общие параметры
     slidesPerView: 4,
     spaceBetween: 0,
@@ -116,11 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // Инициализация основного слайдера
-  var swiperHero = new Swiper(".hero-slider .swiper", {
+  var swiperHero = new Swiper(".hero-home__slider", {
     loop: true,
     navigation: {
-      nextEl: ".hero-slider .swiper-button-next",
-      prevEl: ".hero-slider .swiper-button-prev",
+      nextEl: ".hero-home .swiper-button-next",
+      prevEl: ".hero-home .swiper-button-prev",
     },
     thumbs: {
       swiper: swiperThumbs
