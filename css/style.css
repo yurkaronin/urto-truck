@@ -12,6 +12,7 @@
   --Grey: #999999;
   --Text: #656565;
   --Mod1: rgba(255, 255, 255, 0.1);
+  --Mod2: rgba(0, 0, 0, 0.8);
 }
 
 html {
@@ -305,10 +306,16 @@ input[type=radio].visually-hidden {
   padding-top: 70px;
   padding-bottom: 50px;
 }
+.section + .section {
+  padding-top: 20px;
+}
 @media (max-width: 767px) {
   .section {
     padding-top: 35px;
     padding-bottom: 25px;
+  }
+  .section + .section {
+    padding-top: 10px;
   }
 }
 
@@ -1376,6 +1383,104 @@ input[type=radio].visually-hidden {
     margin-bottom: 0;
     padding-bottom: 30px;
     padding-top: 22px;
+  }
+}
+
+.articles__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.articles__image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 22px;
+}
+.articles__group {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 16px;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 21px;
+}
+.articles__group::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 1px;
+  background-color: var(--LightGrey);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.articles__title {
+  margin: 0;
+  margin-right: 16px;
+  color: var(--Dark);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.articles__date {
+  color: var(--Grey);
+  text-align: right;
+  font-family: var(--Inter);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
+}
+.articles__text {
+  margin: 0;
+  display: block;
+  color: var(--Mod2);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+}
+@media (max-width: 1439px) {
+  .articles__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .articles__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .articles__group {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 0;
+    margin-bottom: 16px;
+  }
+  .articles__group::after {
+    display: none;
+  }
+  .articles__title {
+    margin-right: 0;
+  }
+  .articles__date {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .articles__date::after {
+    content: "";
+    display: block;
+    width: 96px;
+    height: 1px;
+    background-color: var(--LightGrey);
+    bottom: 0;
+    left: 0;
+    margin-left: 15px;
   }
 }
 
