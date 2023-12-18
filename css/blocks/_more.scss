@@ -1,0 +1,23 @@
+.more {
+  display: flex;
+  max-width: max-content;
+  align-items: center;
+  position: relative;
+  color: inherit;
+  text-align: center;
+  font-family: var(--Inter);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='26' height='12' fill='none'%3e%3cpath stroke='%23EC3C3C' stroke-linecap='square' stroke-linejoin='round' stroke-width='2' d='M20.714 10 25 6m0 0-4.286-4M25 6H1'/%3e%3c/svg%3e");
+    width: 26px;
+    height: 12px;
+    background-size: contain;
+    margin-left: 16px;
+  }
+}

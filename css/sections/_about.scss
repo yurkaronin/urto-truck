@@ -1,0 +1,40 @@
+.about {
+  background-color: var(--Dark);
+  color: var(--White);
+  &__grid {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    width: 100%;
+  }
+  &__image {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  .title {
+    color: inherit;
+  }
+  .wrapper {
+    padding-top: 70px;
+    padding-inline: 80px;
+  }
+
+  .text {
+    margin-bottom: 26px;
+    & + & {
+      margin-bottom: initial;
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  .more {
+    margin-bottom: 66px;
+  }
+  .title--2 {
+    margin-bottom: 32px;
+  }
+}
