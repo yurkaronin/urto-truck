@@ -136,10 +136,10 @@
       font-size: 64px;
       margin-bottom: 19px;
     }
-    &__slide-details {
-      padding-bottom: 96px;
-      padding-top: 32px;
-    }
+    // &__slide-details {
+      // padding-bottom: 96px;
+      // padding-top: 32px;
+    // }
   }
 
   @media (max-width: 1023px) {
@@ -155,7 +155,7 @@
       bottom: 0;
       right: 0;
       flex-direction: row;
-      position: initial;
+      position: absolute;
     }
     &__buttons {
       display: grid;
@@ -171,7 +171,7 @@
       transform: rotate(-90deg);
     }
     &__slide-details {
-      height: initial;
+      height: 100%;
     }
     &__slide-title {
       font-size: 56px;
@@ -224,6 +224,7 @@
     }
     &__aside {
       height: 60px;
+      position: initial;
     }
 
     &__slide-title {

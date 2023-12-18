@@ -37,6 +37,18 @@
     width: 100%;
     position: relative;
     transition: all 0.3s;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 0;
+      background-color: var(--Over);
+      transition: all 0.3s;
+      height: 4px;
+    }
   }
 
   .current-page::before {
@@ -46,7 +58,7 @@
     top: -1px;
     left: 0;
     width: calc(100% + 1px);
-    height: 4px;
+
     background-color: var(--Red);
   }
 
@@ -54,14 +66,9 @@
   &__link:active,
   &__link:focus {
     &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -1px;
-      left: 0;
       width: calc(100% + 1px);
-      height: 4px;
       background-color: var(--Over);
+      transition: all 0.3s;
     }
   }
   &__item:has(ul) {
@@ -195,7 +202,6 @@
     transition: all 0.3s;
     pointer-events: none;
     &__wrapper {
-
     }
 
     &__list {
