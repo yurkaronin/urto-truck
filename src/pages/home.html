@@ -3,8 +3,8 @@
 
 
 @@include('src/blocks/head.html', {
-  "title": "Главная страница",
-  "description": "Описание главной страницы"
+"title": "Главная страница",
+"description": "Описание главной страницы"
 })
 
 
@@ -25,34 +25,275 @@
 
         <ul class="logotype-list">
           <li class="logotype-list__item">
-            <a class="logotype-list__link" href="#">
+            <a class="logotype-list__link" href="#" data-brand="sinotruk">
               <img src="./img/logo/1.png" alt="Логотип" class="logotype-list__image" width="56">
               <p class="logotype-list__name">sinotruk</p>
               <p class="logotype-list__text">12 грузовиков</p>
             </a>
           </li>
           <li class="logotype-list__item">
-            <a class="logotype-list__link" href="#">
+            <a class="logotype-list__link" href="#" data-brand="dongfeng">
               <img src="./img/logo/2.png" alt="Логотип" class="logotype-list__image" width="56">
               <p class="logotype-list__name">dongfeng</p>
               <p class="logotype-list__text">8 грузовиков</p>
             </a>
           </li>
           <li class="logotype-list__item">
-            <a class="logotype-list__link" href="#">
+            <a class="logotype-list__link" href="#" data-brand="faw">
               <img src="./img/logo/3.png" alt="Логотип" class="logotype-list__image" width="56">
               <p class="logotype-list__name">FAW</p>
               <p class="logotype-list__text">10 грузовиков</p>
             </a>
           </li>
           <li class="logotype-list__item">
-            <a class="logotype-list__link" href="#">
+            <a class="logotype-list__link" href="#" data-brand="man">
               <img src="./img/logo/4.png" alt="Логотип" class="logotype-list__image" width="56">
               <p class="logotype-list__name">Man</p>
               <p class="logotype-list__text">4 грузовиков</p>
             </a>
           </li>
         </ul>
+
+        <ul class="card-list">
+
+          <li class="card-list__item" data-brand-card="sinotruk">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика sinotruk</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="sinotruk">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика sinotruk</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="sinotruk">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика sinotruk</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="card-list__item" data-brand-card="dongfeng">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика dongfeng</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="dongfeng">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика dongfeng</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="dongfeng">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика dongfeng</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="card-list__item" data-brand-card="faw">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика faw</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="faw">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика faw</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="faw">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика faw</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="card-list__item" data-brand-card="man">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика man</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="man">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика man</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="man">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика man</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Гузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <a href="#" class="button button--left-auto">Смотреть 12 грузовиков</a>
 
 
 

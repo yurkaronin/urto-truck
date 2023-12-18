@@ -42,7 +42,11 @@
   }
 
 
-
+  &--left-auto {
+    margin-right: 0;
+    margin-left: auto;
+    max-width: max-content;
+  }
 
 
   @media (max-width: 767px) {}

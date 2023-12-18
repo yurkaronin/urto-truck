@@ -1,0 +1,140 @@
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 48px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  &__item {
+    position: relative;
+    .label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  &__link {
+    width: 100%;
+    border: 1px solid var(--LightGrey, #ededed);
+    transition: all 0.3s;
+    display: block;
+    z-index: 1;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid var(--Grey);
+
+      .card-list__photo {
+        scale: 1.02;
+      }
+      .card-list__name {
+        color: var(--Black);
+      }
+      .card-list__name::before {
+        width: 8px;
+      }
+    }
+  }
+  &__photo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s;
+  }
+  &__head {
+    position: relative;
+  }
+  &__body {
+    padding: 24px 40px 24px;
+  }
+  &__name {
+    position: relative;
+    margin: 0;
+    color: var(--Dark);
+    font-family: var(--Exo);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 26px;
+    display: flex;
+    align-items: baseline;
+    padding-left: 16px;
+    &::before {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 14px;
+      background-color: var(--Red);
+      transition: all 0.3s;
+      flex-shrink: 0;
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 96px;
+      height: 1px;
+      background-color: var(--LightGrey);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__price {
+    display: block;
+    margin: 0;
+    margin-bottom: 15px;
+    color: var(--Dark);
+    font-family: var(--Exo);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+  }
+  &__details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    color: var(--Grey);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    b {
+      color: var(--Dark);
+      font-weight: 800;
+    }
+  }
+
+  @media (max-width: 1439px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 1023px) {
+    &__name {
+      font-size: 16px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+    }
+    &__body {
+      padding: 20px 24px 15px;
+    }
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30px;
+  }
+}

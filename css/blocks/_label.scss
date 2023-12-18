@@ -1,0 +1,21 @@
+.label {
+  display: flex;
+  max-width: max-content;
+  text-decoration: none;
+  color: var(--White, #fff);
+  text-align: center;
+  font-family: var(--Inter);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: var(--Red);
+  transition: all 0.3s;
+  padding: 8.5px 12px;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--Over);
+  }
+}
