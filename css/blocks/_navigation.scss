@@ -36,6 +36,7 @@
     max-width: 100%;
     width: 100%;
     position: relative;
+    transition: all 0.3s;
   }
 
   .current-page::before {
@@ -50,7 +51,7 @@
   }
 
   &__link:hover,
-  // &__link:active,
+  &__link:active,
   &__link:focus {
     &::before {
       content: "";

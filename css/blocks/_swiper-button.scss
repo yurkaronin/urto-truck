@@ -1,0 +1,38 @@
+.swiper-button {
+  width: 96px;
+  height: 96px;
+  background-color: var(--Red);
+  position: initial;
+  margin: 0;
+  border: none;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s;
+
+  &:after {
+    display: none;
+  }
+  svg {
+    flex-shrink: 0;
+    width: 12px;
+    height: 26px;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--Over);
+    svg {
+      scale: 1.2;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+  }
+}

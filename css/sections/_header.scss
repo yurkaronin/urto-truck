@@ -38,6 +38,11 @@
       }
     }
   }
+  &__logo-link:hover + &__logo-text,
+  &__logo-link:hover + &__logo-text,
+  &__logo-link:focus + &__logo-text {
+    color: var(--Dark);
+  }
 
   &__logo-text {
     display: block;
@@ -49,6 +54,7 @@
     font-weight: 400;
     letter-spacing: 0.28px;
     max-width: 465px;
+    transition: all 0.3s;
   }
   &__contacts-list {
     list-style: none;
