@@ -3,6 +3,11 @@
   height: calc(100vh - 105px);
   margin-top: 105px;
 
+  &--mod {
+    height: 800px;
+    margin-top: initial;
+  }
+
   &__aside {
     position: absolute;
     left: 0;
@@ -14,6 +19,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  &--mod &__aside {
+    width: 192px;
   }
   &__thumbs {
     width: auto;
@@ -38,6 +46,10 @@
       transition: all 0.3s;
     }
   }
+  &--mod &__thumbs .swiper-slide {
+    width: 192px;
+    height: auto;
+  }
   &__thumbs .swiper-slide:hover,
   &__thumbs .swiper-slide:active,
   &__thumbs .swiper-slide:focus {
@@ -54,20 +66,29 @@
     grid-template-columns: 1fr;
     gap: 0;
   }
+  &--mod &__buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   &__slider {
     background-color: var(--Black);
     height: 100%;
   }
+  &--mod &__slider {
+    height: 800px;
+  }
   &__slide-image {
     display: block;
     width: 100%;
-    height: calc(100vh - 105px);
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
+  }
+  &--mod &__slide-image {
+    height: 100%;
   }
   &__slide-details {
     display: flex;
@@ -127,6 +148,38 @@
     height: 100%;
   }
 
+  &--mod &__thumbs {
+    .swiper-slide {
+      text-align: left;
+      padding: 16px 24px 10px;
+      color: var(--White);
+      font-family: var(--Exo);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+
+      span {
+        margin-top: auto;
+        line-height: initial;
+      }
+    }
+  }
+
+  &--mod .swiper-button svg {
+    width: 26px;
+    height: 12px;
+  }
+  &__icon {
+    display: block;
+    // width: 26px;
+    // height: 26px;
+    margin-bottom: 5px;
+  }
+
   @media (max-width: 1600px) {
     &__slide-logo {
       max-width: 128px;
@@ -136,15 +189,51 @@
       font-size: 64px;
       margin-bottom: 19px;
     }
-    // &__slide-details {
-      // padding-bottom: 96px;
-      // padding-top: 32px;
-    // }
+  }
+
+  @media (max-width: 1439px) {
+    &--mod {
+      height: initial;
+    }
+    &--mod &__aside {
+      top: auto;
+      height: 96px;
+      width: 100%;
+      max-width: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      flex-direction: row;
+      position: absolute;
+    }
+    &--mod &__thumbs {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      margin-left: 0;
+    }
+    &--mod &__thumbs .swiper-wrapper {
+      flex-direction: row;
+      width: auto;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+    &--mod .hero-home__thumbs .swiper-slide {
+      width: 192px;
+      height: 96px;
+      border-bottom: none;
+      border-right: 1px solid var(--Mod1);
+    }
   }
 
   @media (max-width: 1023px) {
     height: calc(100vh - 120px);
     margin-top: 120px;
+    &--mod {
+      height: initial;
+      margin-top: initial;
+    }
 
     &__aside {
       top: auto;
@@ -169,6 +258,15 @@
     }
     .swiper-button-next svg {
       transform: rotate(-90deg);
+    }
+
+    &--mod {
+      .swiper-button-prev svg {
+        transform: none;
+      }
+      .swiper-button-next svg {
+        transform: none;
+      }
     }
     &__slide-details {
       height: 100%;
@@ -196,6 +294,9 @@
     margin-top: 56px;
     background-color: var(--Black);
     color: var(--White);
+    &--mod {
+      margin-top: 0;
+    }
     &__slide-image {
       height: auto;
       width: 100%;
@@ -241,6 +342,39 @@
       img {
         max-width: 40px;
       }
+    }
+    &--mod &__slider {
+      height: 100%;
+    }
+    &--mod &__thumbs {
+      .swiper-slide {
+        width: 165px;
+        padding: 9px 16px;
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+        justify-content: flex-start;
+      }
+      .swiper-slide {
+        font-size: 12px;
+        span {
+          margin: 0;
+        }
+      }
+    }
+    &--mod &__aside {
+      height: 60px;
+      position: initial;
+    }
+    &--mod &__icon {
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+    &--mod &__slide-details {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 30px;
+      padding-top: 22px;
     }
   }
 }

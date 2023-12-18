@@ -65,37 +65,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
   };
 
+  // СЛАЙДЕР ГЛАВНАЯ ПЕРВЫЙ ЭКРАН
+    // Инициализация миниатюрного слайдера
+    var swiperThumbs = new Swiper('.js-slider-home-first .hero-home__thumbs', {
+      // Общие параметры
+      slidesPerView: 4,
+      spaceBetween: 0,
+      freeMode: true,
+      watchSlidesProgress: true,
+      autoHeight: true,
+      // Параметры для разных точек останова
+      breakpoints: {
+        // Когда ширина экрана меньше или равна 1023px
+        1023: {
+          direction: 'horizontal', // Горизонтальная ориентация
+          autoHeight: false,
+          slidesPerView: 'auto', // Автоматическое определение количества слайдов
+        }
+      }
+    });
+    // Инициализация основного слайдера
+    var swiperHero = new Swiper(".js-slider-home-first .hero-home__slider", {
+      loop: true,
+      navigation: {
+        nextEl: ".js-slider-home-first .swiper-button-next",
+        prevEl: ".js-slider-home-first .swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiperThumbs
+      }
+    });
+  // КОНЕЦ СЛАЙДЕР ГЛАВНАЯ ПЕРВЫЙ ЭКРАН
+
+  // МЕГА СЛАЙДЕР
   // Инициализация миниатюрного слайдера
-  var swiperThumbs = new Swiper('.hero-home__thumbs', {
+  var swiperThumbs = new Swiper('.js-mega-slider .hero-home__thumbs', {
     // Общие параметры
-    slidesPerView: 4,
+    slidesPerView: 'auto',
     spaceBetween: 0,
     freeMode: true,
     watchSlidesProgress: true,
-    autoHeight: true,
     // Параметры для разных точек останова
     breakpoints: {
       // Когда ширина экрана меньше или равна 1023px
       1023: {
         direction: 'horizontal', // Горизонтальная ориентация
-        autoHeight: false,
         slidesPerView: 'auto', // Автоматическое определение количества слайдов
       }
     }
   });
-
-
   // Инициализация основного слайдера
-  var swiperHero = new Swiper(".hero-home__slider", {
+  var swiperHero = new Swiper(".js-mega-slider .hero-home__slider", {
     loop: true,
     navigation: {
-      nextEl: ".hero-home .swiper-button-next",
-      prevEl: ".hero-home .swiper-button-prev",
+      nextEl: ".js-mega-slider .swiper-button-next",
+      prevEl: ".js-mega-slider .swiper-button-prev",
     },
     thumbs: {
       swiper: swiperThumbs
     }
   });
+  // КОНЕЦ МЕГА СЛАЙДЕР
+
+
   // табы с карточками и брендами
   const brandLinks = document.querySelectorAll('.logotype-list__link');
   const cards = document.querySelectorAll('.card-list__item');
