@@ -1,0 +1,17 @@
+.just-text {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--Text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  b {
+    font-weight: 700;
+    color: var(--Dark);
+  }
+}

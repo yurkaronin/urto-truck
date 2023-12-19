@@ -63,9 +63,7 @@
     margin-bottom: 32px;
     max-width: 480px;
   }
-  &__header {
-    display: none;
-  }
+
   @media (max-width: 1439px) {
     &__flex {
       min-height: 600px;
@@ -92,19 +90,12 @@
   }
   @media (max-width: 767px) {
     margin-top: 56px;
-    &__header {
-      display: block;
-      background-color: var(--White);
-      padding: 24px 0 33px;
-      .title {
-        margin-bottom: 0;
-      }
-    }
+
     &__details {
       align-items: flex-start;
     }
     &__image {
-      height: auto;
+      height: 255px;
       width: 100%;
       object-fit: cover;
       position: initial;

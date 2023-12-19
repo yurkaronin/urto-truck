@@ -128,6 +128,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // КОНЕЦ МЕГА СЛАЙДЕР
 
 
+  // простой слайдер
+  var custSlider = new Swiper(".cust-slider .swiper", {
+    // slidesPerView: 1,
+    pagination: {
+      el: ".cust-slider .swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".cust-slider .swiper-button-next",
+      prevEl: ".cust-slider .swiper-button-prev",
+    },
+  });
+
+
   // табы с карточками и брендами
   const brandLinks = document.querySelectorAll('.logotype-list__link');
   const cards = document.querySelectorAll('.card-list__item');
