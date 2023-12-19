@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кузовной ремонт грузовиков и автобусов</title>
+  <meta name="description" content="Описание главной страницы">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Стили  -->
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+
+
+
+<body>
+  <header class="header">
+
+  <div class="header__top">
+    <div class="wrapper">
+      <div class="header__flex">
+        <div class="header__logo">
+          <a class="header__logo-link" href="/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="159" height="21" fill="none">
+              <path fill="#EC3C3C"
+                d="M15.668.288c1.53 0 2.819.168 3.864.504 1.064.317 1.913.859 2.548 1.624.653.747 1.13 1.773 1.428 3.08.299 1.288.448 2.903.448 4.844 0 1.941-.15 3.565-.448 4.872-.299 1.288-.775 2.315-1.428 3.08-.635.747-1.484 1.288-2.548 1.624-1.045.317-2.333.476-3.864.476-1.437 0-2.66-.159-3.668-.476-.99-.336-1.783-.877-2.38-1.624-.597-.765-1.036-1.792-1.316-3.08-.28-1.307-.42-2.93-.42-4.872 0-1.941.14-3.556.42-4.844.28-1.307.719-2.333 1.316-3.08.597-.765 1.39-1.307 2.38-1.624 1.008-.336 2.23-.504 3.668-.504ZM4.328.68V20H.016V.68h4.312Zm5.236 7.812v2.996H4.076V8.492h5.488Zm6.104-4.816c-.933 0-1.661.196-2.184.588-.523.392-.896 1.073-1.12 2.044-.205.952-.308 2.296-.308 4.032 0 1.717.103 3.061.308 4.032.224.97.597 1.652 1.12 2.044.523.392 1.25.588 2.184.588.97 0 1.727-.196 2.268-.588.56-.392.943-1.073 1.148-2.044.224-.97.336-2.315.336-4.032 0-1.736-.112-3.08-.336-4.032-.205-.97-.588-1.652-1.148-2.044-.541-.392-1.297-.588-2.268-.588ZM34.698.4c1.792 0 3.201.187 4.228.56 1.026.373 1.754 1.017 2.184 1.932.448.915.672 2.193.672 3.836 0 1.643-.215 2.921-.644 3.836-.41.915-1.092 1.559-2.044 1.932-.952.355-2.24.532-3.864.532-.859 0-1.699-.037-2.52-.112a35.231 35.231 0 0 1-2.296-.28 30.436 30.436 0 0 1-1.82-.336c-.504-.13-.85-.252-1.036-.364l.084-2.128h6.944c.746-.019 1.325-.112 1.736-.28.43-.168.728-.476.896-.924.186-.448.28-1.073.28-1.876 0-.821-.094-1.456-.28-1.904a1.515 1.515 0 0 0-.896-.924c-.41-.187-.99-.28-1.736-.28-1.718 0-3.192.01-4.424.028-1.232.019-2.063.056-2.492.112L27.25.68a34.55 34.55 0 0 1 2.212-.196c.69-.037 1.437-.056 2.24-.056C32.523.409 33.522.4 34.698.4Zm-3.164.28V20H27.25V.68h4.284Zm21.647 0V20h-4.284V.68h4.284Zm5.824 0v3.36H43.101V.68h15.904Zm9.85-.392c1.53 0 2.828.168 3.892.504 1.064.317 1.913.859 2.548 1.624.653.747 1.129 1.773 1.428 3.08.298 1.288.448 2.903.448 4.844 0 1.941-.15 3.565-.448 4.872-.299 1.288-.775 2.315-1.428 3.08-.635.747-1.484 1.288-2.548 1.624-1.064.317-2.362.476-3.892.476-1.531 0-2.828-.159-3.892-.476-1.064-.336-1.923-.877-2.576-1.624-.654-.765-1.13-1.792-1.428-3.08-.299-1.307-.448-2.93-.448-4.872 0-1.941.149-3.556.448-4.844.298-1.307.774-2.333 1.428-3.08.653-.765 1.512-1.307 2.576-1.624 1.064-.336 2.361-.504 3.892-.504Zm0 3.388c-.99 0-1.764.196-2.324.588-.542.392-.934 1.073-1.176 2.044-.224.952-.336 2.296-.336 4.032 0 1.717.112 3.061.336 4.032.242.97.634 1.652 1.176 2.044.56.392 1.334.588 2.324.588.97 0 1.726-.196 2.268-.588.56-.392.952-1.073 1.176-2.044.242-.97.364-2.315.364-4.032 0-1.736-.122-3.08-.364-4.032-.224-.97-.616-1.652-1.176-2.044-.542-.392-1.298-.588-2.268-.588Zm19.613 7.868v2.632h-8.344v-2.632h8.344ZM99.173.68V20H94.89V.68h4.284Zm5.824 0v3.36H89.093V.68h15.904Zm9.9-.28c1.792 0 3.201.187 4.228.56 1.027.373 1.755 1.017 2.184 1.932.448.915.672 2.193.672 3.836 0 1.643-.215 2.921-.644 3.836-.411.915-1.092 1.559-2.044 1.932-.952.355-2.24.532-3.864.532-.859 0-1.699-.037-2.52-.112a35.222 35.222 0 0 1-2.296-.28 30.48 30.48 0 0 1-1.82-.336c-.504-.13-.849-.252-1.036-.364l.084-2.128h6.944c.747-.019 1.325-.112 1.736-.28.429-.168.728-.476.896-.924.187-.448.28-1.073.28-1.876 0-.821-.093-1.456-.28-1.904a1.516 1.516 0 0 0-.896-.924c-.411-.187-.989-.28-1.736-.28-1.717 0-3.192.01-4.424.028-1.232.019-2.063.056-2.492.112l-.42-3.08a34.524 34.524 0 0 1 2.212-.196 41.663 41.663 0 0 1 2.24-.056c.821-.019 1.82-.028 2.996-.028Zm-3.164.28V20h-4.284V.68h4.284Zm22.263 0c.355 0 .663.103.924.308.28.205.467.476.56.812l5.6 18.2h-4.368l-3.948-14.196-.224-.952c-.074-.336-.14-.653-.196-.952h-.756a28.39 28.39 0 0 1-.196.952c-.056.317-.13.635-.224.952L127.22 20h-4.396l5.628-18.2c.094-.336.271-.607.532-.812a1.57 1.57 0 0 1 .952-.308h4.06Zm2.968 11.004v3.22H126.94v-3.22h10.024ZM158.029.68c-.41 1.288-.774 2.417-1.092 3.388a30.674 30.674 0 0 1-.924 2.464c-.298.69-.634 1.27-1.008 1.736a3.93 3.93 0 0 1-1.288 1.064c-.504.243-1.129.41-1.876.504v.168c.784.093 1.438.27 1.96.532a3.759 3.759 0 0 1 1.4 1.092c.411.467.775 1.083 1.092 1.848.336.747.682 1.661 1.036 2.744.355 1.064.766 2.324 1.232 3.78h-4.48a603.858 603.858 0 0 0-1.316-4.144c-.354-1.101-.709-1.97-1.064-2.604-.354-.653-.774-1.12-1.26-1.4-.485-.28-1.11-.42-1.876-.42l-.028-2.968c.728 0 1.335-.15 1.82-.448.486-.317.906-.784 1.26-1.4.355-.635.682-1.437.98-2.408.318-.99.672-2.165 1.064-3.528h4.368Zm-10.64 0v5.46c0 .635-.046 1.27-.14 1.904a9.534 9.534 0 0 1-.448 1.82c.15.579.28 1.176.392 1.792a7.86 7.86 0 0 1 .196 1.68V20h-4.256V.68h4.256Zm2.38 7.784v2.968h-3.472V8.464h3.472Z" />
+            </svg>
+          </a>
+          <span class="header__logo-text">Продажа и обслуживание грузовых автомобилей в Краснодаре</span>
+        </div>
+        <ul class="header__contacts-list">
+          <li class="header__contacts-item">
+            <a class="header__contacts-link --phone" href="tel:88002220409" target="_blank">
+              <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.84275 17.1573C14.2151 23.5296 20.3025 24.878 22.5494 25C23.9844 22.8967 24.5917 21.1601 25 19.6079C23.4478 18.0966 21.1878 16.5541 19.1178 15.6862L16.6671 18.1375C15.8297 17.9129 13.5316 16.9631 10.7842 14.2158C8.03755 11.4691 7.0871 9.17101 6.86249 8.33356L9.31382 5.88223C8.44587 3.81149 6.90339 1.55219 5.3921 0C3.83991 0.408325 2.10332 1.01492 0 2.45133C0.122705 4.69746 1.47039 10.7842 7.84275 17.1573Z"
+                  fill="#3A3A3A" />
+              </svg>
+
+              <span>8 800 222 04 09</span>
+            </a>
+          </li>
+          <li class="header__contacts-item scale">
+            <a class="header__contacts-link --whatsapp" href="#" target="_blank">
+              <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_260_241)">
+                  <path
+                    d="M24.0348 7.44722C23.4112 5.99028 22.5112 4.67639 21.4015 3.57361C20.289 2.46944 18.9654 1.57639 17.4973 0.958333C16.0279 0.341667 14.4154 0 12.7223 0C11.0293 0 9.41538 0.341667 7.94733 0.958333C6.47927 1.57639 5.15566 2.46944 4.04316 3.57361C2.93205 4.67639 2.03066 5.99028 1.40983 7.44722C0.787603 8.90555 0.443159 10.5069 0.443159 12.1861C0.443159 12.7306 0.47927 13.2694 0.551492 13.8042C0.623714 14.3389 0.730659 14.8667 0.872325 15.3847C1.01399 15.9028 1.19038 16.4111 1.39871 16.9069C1.60705 17.4028 1.85149 17.8847 2.12649 18.35L1.6001 19.9056L1.07233 21.4597L0.545936 23.0153L0.0181586 24.5708C0.00704753 24.6 0.00149197 24.6292 0.000103082 24.6597C-0.00128581 24.6889 0.00149197 24.7194 0.00843642 24.7472C0.0153809 24.775 0.0251031 24.8042 0.038992 24.8306C0.0528809 24.8569 0.0709364 24.8806 0.0931586 24.9028C0.108436 24.9194 0.125103 24.9319 0.143159 24.9444C0.161214 24.9569 0.180659 24.9681 0.200103 24.975C0.219548 24.9819 0.240381 24.9889 0.261214 24.9931C0.282048 24.9972 0.302881 25 0.325103 25C0.333436 25 0.34177 25 0.350103 24.9986C0.358436 24.9986 0.36677 24.9972 0.375103 24.9958C0.383436 24.9944 0.39177 24.9931 0.400103 24.9917C0.408436 24.9889 0.41677 24.9875 0.425103 24.9847L2.04594 24.4694L3.66677 23.9542L5.28899 23.4389L6.90983 22.9236C7.35427 23.1611 7.81121 23.3694 8.28205 23.55C8.75149 23.7306 9.23205 23.8819 9.72094 24.0042C10.2098 24.125 10.7057 24.2167 11.207 24.2792C11.7084 24.3403 12.2154 24.3708 12.7223 24.3708C14.4154 24.3708 16.0279 24.0306 17.4973 23.4125C18.9654 22.7958 20.289 21.9014 21.4015 20.7986C22.5126 19.6958 23.4112 18.3833 24.0348 16.925C24.6557 15.4681 25.0001 13.8667 25.0001 12.1861C25.0001 10.5069 24.6557 8.90555 24.0348 7.44722ZM19.114 15.4292C19.1001 15.5778 19.0765 15.7417 19.0376 15.9069C19.0015 16.0736 18.9501 16.2444 18.8918 16.4097C18.8154 16.6222 18.6751 16.825 18.4973 17.0097C18.3195 17.1958 18.1043 17.3625 17.8807 17.5056C17.6557 17.6486 17.4223 17.7667 17.2057 17.8528C16.989 17.9389 16.7904 17.9931 16.639 18.0056L16.6168 18.0069L16.5945 18.0097L16.5709 18.0125L16.5473 18.0139C16.5126 18.0181 16.4765 18.0208 16.439 18.025C16.4015 18.0278 16.3598 18.0319 16.3195 18.0347C16.2793 18.0375 16.2348 18.0403 16.189 18.0417C16.1445 18.0431 16.0973 18.0444 16.0473 18.0444C15.9293 18.0444 15.7862 18.0389 15.6126 18.0194C15.4404 18.0014 15.2362 17.9694 14.9918 17.9153C14.7473 17.8611 14.4626 17.7847 14.1293 17.6778C13.7945 17.5708 13.4112 17.4333 12.9709 17.2569C12.5126 17.0736 12.0557 16.8375 11.6057 16.5556C11.1557 16.2722 10.7112 15.9403 10.2807 15.5653C9.84871 15.1903 9.42927 14.7736 9.02788 14.3181C8.62649 13.8611 8.24177 13.3667 7.87927 12.8361C7.87233 12.8278 7.86677 12.8181 7.86121 12.8125C7.85566 12.8042 7.85149 12.7972 7.84733 12.7903C7.84177 12.7833 7.83899 12.7778 7.83621 12.7736C7.83205 12.7681 7.82927 12.7639 7.82649 12.7611C7.73205 12.6361 7.60566 12.4611 7.46955 12.2458C7.33344 12.0319 7.1876 11.7764 7.05427 11.4944C6.91955 11.2125 6.79871 10.9028 6.70983 10.5764C6.62094 10.25 6.56538 9.90694 6.56538 9.55972C6.56538 9.17361 6.6126 8.82917 6.6876 8.525C6.7626 8.22083 6.86955 7.95833 6.98899 7.73472C7.10983 7.50972 7.24316 7.32639 7.3751 7.18194C7.50566 7.0375 7.63483 6.92917 7.74316 6.86111C7.84594 6.79583 7.98066 6.74028 8.12927 6.69167C8.27649 6.64444 8.4376 6.60417 8.59038 6.57222C8.74316 6.54028 8.88899 6.51528 9.00705 6.49861C9.1251 6.48194 9.21538 6.47222 9.25844 6.47083C9.29316 6.46944 9.31816 6.46806 9.33483 6.46667C9.35288 6.46667 9.3626 6.46528 9.36816 6.46528C9.37371 6.46528 9.37788 6.46528 9.38205 6.46528C9.38483 6.46528 9.38899 6.46528 9.39872 6.46528C9.48899 6.46528 9.57233 6.47917 9.65149 6.50556C9.72927 6.53472 9.80149 6.57639 9.86955 6.63333C9.93621 6.69028 9.99871 6.76111 10.057 6.84722C10.1154 6.93333 10.1682 7.0375 10.2168 7.15417C10.2376 7.20278 10.3015 7.35694 10.3848 7.55833C10.4695 7.76111 10.5737 8.01528 10.6779 8.26528C10.782 8.51528 10.8848 8.76111 10.964 8.95C11.0445 9.14028 11.1001 9.27222 11.1112 9.29306C11.1237 9.31944 11.1445 9.35833 11.164 9.40833C11.1834 9.45833 11.2029 9.51944 11.214 9.59028C11.2265 9.66111 11.2307 9.7375 11.2195 9.82361C11.2084 9.90833 11.1834 9.99861 11.1362 10.0944L11.1251 10.1139L11.1154 10.1347L11.1057 10.1556L11.0945 10.175C11.0751 10.2153 11.057 10.2542 11.0376 10.2903C11.0182 10.3292 10.9973 10.3667 10.9737 10.4042C10.9515 10.4431 10.9265 10.4806 10.8987 10.5208C10.8695 10.5597 10.8376 10.6028 10.8001 10.6458C10.7876 10.6597 10.7751 10.675 10.764 10.6875C10.7501 10.7028 10.7376 10.7181 10.7251 10.7333C10.7126 10.7472 10.7001 10.7625 10.689 10.7764C10.6779 10.7903 10.664 10.8056 10.6515 10.8208C10.6251 10.8514 10.6001 10.8833 10.5737 10.9139C10.5473 10.9444 10.5209 10.9764 10.4945 11.0069C10.4682 11.0375 10.4432 11.0667 10.4168 11.0944C10.3904 11.1222 10.3654 11.1486 10.3404 11.1736C10.332 11.1819 10.3223 11.1931 10.3112 11.2028C10.3001 11.2153 10.289 11.2278 10.2779 11.2403C10.2668 11.2514 10.257 11.2625 10.2487 11.2736C10.2418 11.2833 10.2362 11.2931 10.2348 11.3C10.2348 11.3 10.2348 11.3014 10.2348 11.3042C10.2348 11.3069 10.2362 11.3111 10.2376 11.3181C10.239 11.3236 10.2418 11.3319 10.2473 11.3403C10.2515 11.35 10.257 11.3611 10.264 11.3722C10.3154 11.4597 10.4459 11.65 10.6432 11.9042C10.8418 12.1583 11.107 12.4708 11.4279 12.8014C11.7487 13.1306 12.1251 13.4764 12.5418 13.7931C12.9584 14.1097 13.4182 14.3958 13.907 14.6083C13.9293 14.6181 13.9612 14.6319 13.9987 14.6472C14.0376 14.6639 14.0834 14.6806 14.1237 14.6986C14.1654 14.7153 14.2057 14.7292 14.2348 14.7417C14.264 14.7528 14.2862 14.7611 14.289 14.7611C14.2945 14.7611 14.3001 14.7583 14.3057 14.7556C14.3112 14.7528 14.3168 14.7472 14.3251 14.7417C14.3307 14.7361 14.3362 14.7306 14.3445 14.7236C14.3501 14.7167 14.3557 14.7111 14.3612 14.7042C14.4043 14.6556 14.4709 14.5792 14.5487 14.4875C14.6279 14.3972 14.7195 14.2889 14.8098 14.1792C14.9015 14.0708 14.9932 13.9583 15.0723 13.8569C15.1515 13.7556 15.2195 13.6639 15.2654 13.5972C15.3057 13.5361 15.3501 13.4833 15.3959 13.4389C15.4418 13.3931 15.4904 13.3542 15.5418 13.325C15.5932 13.2944 15.6459 13.2708 15.7029 13.2556C15.7584 13.2403 15.8182 13.2319 15.8807 13.2319C15.9168 13.2319 15.9543 13.2347 15.9918 13.2403C16.0265 13.2458 16.064 13.2528 16.0987 13.2625C16.1334 13.2708 16.1682 13.2819 16.2029 13.2917C16.2362 13.3028 16.2709 13.3153 16.3029 13.325C16.3848 13.3542 16.5598 13.4319 16.7765 13.5333C16.9932 13.6333 17.2529 13.7569 17.5043 13.8792C17.7557 14 17.9973 14.1181 18.1793 14.2069C18.3626 14.2958 18.4862 14.3556 18.4973 14.3611C18.557 14.3903 18.6126 14.4181 18.6668 14.4458C18.7182 14.4736 18.7682 14.5 18.8126 14.5306C18.8584 14.5597 18.9001 14.5917 18.9376 14.6278C18.9723 14.6625 19.0057 14.7028 19.032 14.7472C19.0723 14.8139 19.0987 14.9083 19.1112 15.025C19.1265 15.1431 19.1265 15.2806 19.114 15.4292Z"
+                    fill="#43AD45" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_260_241">
+                    <rect width="25" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+
+            </a>
+          </li>
+
+        </ul>
+        <button class="button-menu" type="button">
+          <span class="button-menu__toggle"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navigation">
+    <div class="navigation__wrapper">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Грузовики</a>
+          <ul class="navigation__sub-list">
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Sinotruk</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Dongfeng</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">FAW</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Man
+              </a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Renault</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Volvo</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Сервис</a>
+          <ul class="navigation__sub-list">
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Запасные части</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Сервисное обслуживание</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Кузовной цех</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Грузовой эвакуатор 24/7</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Контрактные детали из Европы</a>
+            </li>
+            <li class="navigation__sub-item">
+              <a href="#" class="navigation__sub-link">Выездное обслуживание</a>
+            </li>
+          </ul>
+
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link current-page">Новости и акции</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">О компании</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Контакты</a>
+        </li>
+      </ul>
+      <!-- мобильный блок с контактами  -->
+      <div class="mobile-contacts">
+        <span class="mobile-contacts__label">Общий телефон:</span>
+        <a class="mobile-contacts__link" href="tel:88002220409" target="_blank">8 800 222 04 09</a>
+      </div>
+    </div>
+
+  </nav>
+
+</header>
+
+
+  <main class="main">
+
+    <section class="hero-inner">
+      <div class="hero-inner__header">
+        <div class="wrapper">
+          <hgroup class="title-group">
+            <h2 class="subtitle">Мы предлагаем</h2>
+            <p class="title">Сервисный центр</p>
+          </hgroup>
+        </div>
+      </div>
+      <img class="hero-inner__image" src="./img/service/1.jpg" alt="фото услуги" width="1920">
+      <div class="wrapper">
+        <div class="hero-inner__flex">
+          <div class="hero-inner__details">
+            <h3 class="hero-inner__title">Кузовной ремонт грузовиков и автобусов</h3>
+            <p class="hero-inner__text">Пример небольшого описания услуги буквально пару тройку строк</p>
+            <a href="#" class="button">назад к списку</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="catalog-announcement section">
+      <div class="wrapper">
+        <hgroup class="title-group">
+          <h2 class="subtitle">Грузовики в наличии</h2>
+          <p class="title">Новинки каталога</p>
+        </hgroup>
+
+        <ul class="logotype-list">
+          <li class="logotype-list__item">
+            <a class="logotype-list__link" href="#" data-brand="sinotruk">
+              <img src="./img/logo/1.png" alt="Логотип" class="logotype-list__image" width="56">
+              <p class="logotype-list__name">sinotruk</p>
+              <p class="logotype-list__text">12 грузовиков</p>
+            </a>
+          </li>
+          <li class="logotype-list__item">
+            <a class="logotype-list__link" href="#" data-brand="dongfeng">
+              <img src="./img/logo/2.png" alt="Логотип" class="logotype-list__image" width="56">
+              <p class="logotype-list__name">dongfeng</p>
+              <p class="logotype-list__text">8 грузовиков</p>
+            </a>
+          </li>
+          <li class="logotype-list__item">
+            <a class="logotype-list__link" href="#" data-brand="faw">
+              <img src="./img/logo/3.png" alt="Логотип" class="logotype-list__image" width="56">
+              <p class="logotype-list__name">FAW</p>
+              <p class="logotype-list__text">10 грузовиков</p>
+            </a>
+          </li>
+          <li class="logotype-list__item">
+            <a class="logotype-list__link" href="#" data-brand="man">
+              <img src="./img/logo/4.png" alt="Логотип" class="logotype-list__image" width="56">
+              <p class="logotype-list__name">Man</p>
+              <p class="logotype-list__text">4 грузовиков</p>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="card-list">
+
+          <li class="card-list__item" data-brand-card="sinotruk">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика sinotruk</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="sinotruk">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика sinotruk</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="sinotruk">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика sinotruk</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="card-list__item" data-brand-card="dongfeng">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика dongfeng</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="dongfeng">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика dongfeng</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="dongfeng">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика dongfeng</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="card-list__item" data-brand-card="faw">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика faw</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="faw">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика faw</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="faw">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика faw</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="card-list__item" data-brand-card="man">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/1.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика man</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="man">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/2.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика man</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="card-list__item" data-brand-card="man">
+            <a class="label" href="#">новый</a>
+            <a href="#" class="card-list__link">
+              <div class="card-list__head">
+                <img class="card-list__photo" src="./img/card-list/3.jpg" alt="фото грузовика" loading="lazy"
+                  width="480">
+
+              </div>
+              <div class="card-list__body">
+                <h3 class="card-list__name">Пример названия грузовика man</h3>
+                <span class="card-list__price">7 300 000 руб.</span>
+                <ul class="card-list__details">
+                  <li>Грузоподъемность: <b>25570 кг</b></li>
+                  <li>Объём кузова: <b>20 м3</b></li>
+                  <li>Колёсная формула: <b>8x4</b></li>
+                  <li>Модель двигателя: <b>Cummins ISL400 50</b></li>
+                </ul>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <a href="#" class="button button--left-auto">Смотреть 12 грузовиков</a>
+
+
+
+      </div>
+    </section>
+
+    <section class="services section">
+      <div class="wrapper">
+        <hgroup class="title-group">
+          <h2 class="subtitle">Мы предлагаем</h2>
+          <p class="title">Сервисный центр</p>
+        </hgroup>
+      </div>
+      <section class="hero-home hero-home--mod js-mega-slider">
+
+  <div class="hero-home__slider swiper">
+    <div class="swiper-wrapper">
+      <!-- слайд  -->
+      <div class="swiper-slide">
+        <!-- картинка на фоне слайда  -->
+        <img class="hero-home__slide-image" src="./img/mega-slider/1.jpg" alt="фото в слайдере" width="1920">
+        <div class="wrapper">
+          <div class="hero-home__slide-details">
+            <h3 class="hero-home__slide-title">Сервисное обслуживание</h3>
+            <p class="hero-home__slide-text">Пример небольшого описания услуги буквально пару тройку строк</p>
+            <a href="#" class="button">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- слайд  -->
+      <div class="swiper-slide">
+        <!-- картинка на фоне слайда  -->
+        <img class="hero-home__slide-image" src="./img/mega-slider/1.jpg" alt="фото в слайдере" width="1920">
+        <div class="wrapper">
+          <div class="hero-home__slide-details">
+            <h3 class="hero-home__slide-title">Сервисное обслуживание</h3>
+            <p class="hero-home__slide-text">Пример небольшого описания услуги буквально пару тройку строк</p>
+            <a href="#" class="button">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- слайд  -->
+      <div class="swiper-slide">
+        <!-- картинка на фоне слайда  -->
+        <img class="hero-home__slide-image" src="./img/mega-slider/1.jpg" alt="фото в слайдере" width="1920">
+        <div class="wrapper">
+          <div class="hero-home__slide-details">
+            <h3 class="hero-home__slide-title">Сервисное обслуживание</h3>
+            <p class="hero-home__slide-text">Пример небольшого описания услуги буквально пару тройку строк</p>
+            <a href="#" class="button">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- слайд  -->
+      <div class="swiper-slide">
+        <!-- картинка на фоне слайда  -->
+        <img class="hero-home__slide-image" src="./img/mega-slider/1.jpg" alt="фото в слайдере" width="1920">
+        <div class="wrapper">
+          <div class="hero-home__slide-details">
+            <h3 class="hero-home__slide-title">Сервисное обслуживание</h3>
+            <p class="hero-home__slide-text">Пример небольшого описания услуги буквально пару тройку строк</p>
+            <a href="#" class="button">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- слайд  -->
+      <div class="swiper-slide">
+        <!-- картинка на фоне слайда  -->
+        <img class="hero-home__slide-image" src="./img/mega-slider/1.jpg" alt="фото в слайдере" width="1920">
+        <div class="wrapper">
+          <div class="hero-home__slide-details">
+            <h3 class="hero-home__slide-title">Сервисное обслуживание</h3>
+            <p class="hero-home__slide-text">Пример небольшого описания услуги буквально пару тройку строк</p>
+            <a href="#" class="button">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- слайд  -->
+      <div class="swiper-slide">
+        <!-- картинка на фоне слайда  -->
+        <img class="hero-home__slide-image" src="./img/mega-slider/1.jpg" alt="фото в слайдере" width="1920">
+        <div class="wrapper">
+          <div class="hero-home__slide-details">
+            <h3 class="hero-home__slide-title">Сервисное обслуживание</h3>
+            <p class="hero-home__slide-text">Пример небольшого описания услуги буквально пару тройку строк</p>
+            <a href="#" class="button">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-home__aside">
+    <!-- мини слайдер с названиями  -->
+    <div class="hero-home__thumbs swiper">
+      <div class="swiper-wrapper">
+        <!-- Миниатюра -->
+        <div class="swiper-slide">
+          <div class="hero-home__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2" d="M3.335 5.67a2.335 2.335 0 1 0 0-4.67 2.335 2.335 0 0 0 0 4.67ZM17.93 21.432l-6.422-6.422c-.912-.911-.912-2.59 0-3.502.912-.912 2.59-.912 3.502 0l6.296 6.496a3.486 3.486 0 0 1 2.668 1.017 3.503 3.503 0 0 1-4.953 4.953c-.733-.733-1.144-1.583-1.092-2.542ZM22.016 22.016l-1.168-1.168M5.086 5.086l6.422 6.422M8.701 4.573 4.503 8.59M10.34 6.254 6.254 10.34M12.092 8.005l-4.087 4.087"/></svg>
+          </div>
+          <span>Запасные части</span>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-home__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="14" fill="none"><path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2" d="M5.077 9.727 1.29 7.757a.553.553 0 0 1-.263-.66L2.28 3.186a.52.52 0 0 1 .692-.334l2.105.875v6ZM25 2.09h-1.573l-6.816 3.274-2.097-1.637h-7.34L5.077 5.364v5.454l1.573 1.636h9.437l6.816-8.181L25 3.727V2.091ZM8.747 1h4.194M10.844 1v1.636"/><path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M24.427 8.09c.229 1.25 1.577 1.98 1.573 3.274-.003.875-.68 1.64-1.573 1.636-.893.003-1.57-.76-1.573-1.636C22.85 10.07 24.2 9.34 24.427 8.09Z"/></svg>
+          </div>
+          <span>Сервисное обслуживание</span>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-home__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" fill="none"><path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2" d="M7 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12 18h-2"/><path stroke="#EC3C3C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M4 18H1v-6.268c0-.209.038-.417.112-.611l2.676-6.009c.218-.57.72-.966 1.303-1.027L12 3.361"/><path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2" d="M20 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path stroke="#EC3C3C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M17 18h-5V1h13v17h-2M5 10.802l3.284-.552L9 7.311"/></svg>
+          </div>
+          <span>Кузовной цех</span>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-home__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" fill="none"><path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2" d="M1 0v6.62l3.333 3.311h8.334L16 6.621V0"/><path fill="#EC3C3C" d="m5.81 23.47-.58.813c.058.042.121.077.187.106l.394-.92Zm7.69-3.608.959.284-.96-.284Zm-1.667-.827.95.313-.95-.313ZM8.5 16.965l-.583-.812a.953.953 0 0 0-.015.011l.598.801ZM12 9.931a1 1 0 1 0-2 0h2ZM3.808 22.04l-.753.657a.995.995 0 0 0 .172.156l.581-.814Zm1.61 2.349A7.828 7.828 0 0 0 8.5 25v-2a5.83 5.83 0 0 1-2.296-.45l-.787 1.839ZM8.5 25c1.805 0 3.184-.792 4.154-1.783a7.64 7.64 0 0 0 1.805-3.07l-1.918-.569a5.644 5.644 0 0 1-1.316 2.24C10.553 22.505 9.665 23 8.5 23v2Zm5.959-4.854c.172-.582-.018-1.1-.27-1.452a2.377 2.377 0 0 0-.913-.739c-.32-.15-.735-.263-1.16-.213-.47.054-1.02.335-1.232.98l1.899.626a.603.603 0 0 1-.216.289.486.486 0 0 1-.22.091c-.034.004-.04-.001-.017.004a.54.54 0 0 1 .227.122l.01.01c-.001 0-.006-.007-.012-.02a.412.412 0 0 1-.014-.266l1.918.568Zm-3.575-1.425c-.059.177-.24.44-.528.669-.298.238-.535.3-.606.3v2c.702 0 1.37-.352 1.852-.735.493-.393.966-.957 1.18-1.607l-1.898-.627Zm-1.134.969a1.076 1.076 0 0 1-1.083-1.07h-2a3.076 3.076 0 0 0 3.083 3.07v-2Zm-1.083-1.07c0-.345.166-.655.43-.853l-1.195-1.603a3.061 3.061 0 0 0-1.235 2.457h2Zm.416-.842c.7-.502 1.45-1.019 1.99-1.664.594-.71.927-1.554.927-2.672h-2c0 .661-.176 1.048-.461 1.389-.34.405-.839.76-1.622 1.322l1.166 1.625ZM12 13.442V9.93h-2v3.51h2ZM5 9.93v3.31h2v-3.31H5Zm0 3.31c0-.037.032.029-.234.299-.125.127-.279.264-.478.437-.19.165-.416.36-.643.576-.95.902-1.978 2.224-1.978 4.482h2c0-1.519.639-2.352 1.355-3.031.19-.18.38-.345.58-.52.192-.166.403-.351.59-.541.36-.366.808-.922.808-1.702H5Zm-3.333 5.794c0 1.395.516 2.663 1.388 3.662l1.507-1.315a3.527 3.527 0 0 1-.895-2.348h-2Zm1.56 3.818 2.003 1.43 1.162-1.627-2.003-1.43-1.162 1.627Z"/><path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M13.5 4.966 11 7.448M13.5.828l-6.667 6.62M9.333.828 3.5 6.62M5.167.828 3.5 2.483"/></svg>
+          </div>
+          <span>Грузовой эвакуатор 24/7</span>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-home__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" fill="none"><path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2" d="M4.652 11.348H6.74l2.652-3.652H19v4.174M19 15.522V22h-5.478l-1.566-2H7.261v-3.956H4.652"/><path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2" d="M18 11.348h4V9.26h3v8.87h-3v-2.087h-4M4.652 11.348H4.61V9.783H1v7.826h3.609v-1.566h.043M16.74 7.696V4h1.564V1H11v3h1.565v3.174"/></svg>
+          </div>
+          <span>Контрактные детали из Европы</span>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-home__icon">
+            <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 11.9655C10.6569 11.9655 12 10.6224 12 8.96552C12 7.30866 10.6569 5.96552 9 5.96552C7.34315 5.96552 6 7.30866 6 8.96552C6 10.6224 7.34315 11.9655 9 11.9655Z" stroke="#EC3C3C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1 9.27586C1 4.7051 4.5816 1 9 1C13.4184 1 17 4.7051 17 9.27586C17 16.2433 10.6 18.0326 9 25C7.4 18.0326 1 16.2433 1 9.27586Z" stroke="#EC3C3C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+          </div>
+          <span>Выездное обслуживание</span>
+        </div>
+      </div>
+    </div>
+    <!-- Навигация  -->
+    <div class="hero-home__buttons">
+      <button class="swiper-button swiper-button-prev" type="button">
+        <svg width="26" height="12" viewBox="0 0 26 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.28571 2L1 6M1 6L5.28571 10M1 6L25 6" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+
+      </button>
+      <button class="swiper-button swiper-button-next" type="button">
+        <svg width="26" height="12" viewBox="0 0 26 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.7143 10L25 6M25 6L20.7143 2M25 6L1 6" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+
+      </button>
+    </div>
+  </div>
+
+</section>
+
+    </section>
+
+    <section class="articles section">
+      <div class="wrapper">
+        <hgroup class="title-group">
+          <h2 class="subtitle">Обратите внимание</h2>
+          <p class="title">новости и акции</p>
+        </hgroup>
+        <ul class="articles__list">
+
+          <li class="articles__item">
+            <a href="#" class="articles__link">
+              <img src="./img/articles/1.jpg" alt="фото статьи" class="articles__image" loading="lazy">
+              <div class="articles__group">
+                <h3 class="articles__title">Пример заголовка акции или новости он может быть длинным и идти в несколько
+                  строк</h3>
+                <time class="articles__date" datetime="2023-06-18">18.06.2023</time>
+              </div>
+              <p class="articles__text">
+                В 2007 году подписан дилерский договор с компанией RENAULT TRUCKS SAS. В 2011 году сдана в эксплуатацию
+                современная сервисная станция.
+
+              </p>
+
+
+            </a>
+          </li>
+          <li class="articles__item">
+            <a href="#" class="articles__link">
+              <img src="./img/articles/2.jpg" alt="фото статьи" class="articles__image" loading="lazy">
+              <div class="articles__group">
+                <h3 class="articles__title">Пример заголовка акции или новости он может быть длинным и идти в несколько
+                  строк</h3>
+                <time class="articles__date" datetime="2023-06-18">18.06.2023</time>
+              </div>
+              <p class="articles__text">
+                В 2007 году подписан дилерский договор с компанией RENAULT TRUCKS SAS. В 2011 году сдана в эксплуатацию
+                современная сервисная станция.
+
+              </p>
+
+
+            </a>
+          </li>
+          <li class="articles__item">
+            <a href="#" class="articles__link">
+              <img src="./img/articles/3.jpg" alt="фото статьи" class="articles__image" loading="lazy">
+              <div class="articles__group">
+                <h3 class="articles__title">Пример заголовка акции или новости он может быть длинным и идти в несколько
+                  строк</h3>
+                <time class="articles__date" datetime="2023-06-18">18.06.2023</time>
+              </div>
+              <p class="articles__text">
+                В 2007 году подписан дилерский договор с компанией RENAULT TRUCKS SAS. В 2011 году сдана в эксплуатацию
+                современная сервисная станция.
+
+              </p>
+
+
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about__grid">
+        <div class="about__left">
+          <picture>
+            <source srcset="./img/about-1439.jpg" media="(max-width: 1439px)">
+            <img class="about__image" src="./img/about.jpg" alt="фото" width="960" loading="lazy">
+          </picture>
+        </div>
+        <div class="about__right">
+          <div class="wrapper">
+            <hgroup class="title-group">
+              <h2 class="subtitle">Обратите внимание</h2>
+              <p class="title">новости и акции</p>
+            </hgroup>
+            <p class="text">
+              Входит в группу компаний «ЮЖНО-РОССИЙСКОЕ ТРАНСПОРТНОЕ ОБЪЕДИНЕНИЕ (ЮРТО)». Общая численность сотрудников
+              более 100 человек. Свое начало берет с продажи европейской коммерческой техники, в последствии организация
+              сервисных станций под брендом ЮРТО.</p>
+            <p class="text">В 2007 году подписан дилерский договор с компанией RENAULT TRUCKS SAS. В 2011 году сдана в
+              эксплуатацию современная сервисная станция с высокотехнологичным оборудованием по обслуживанию грузовой
+              техники в Южном Федеральном округе. В 2012 году компания стала серебряным призером среди сервисных станций
+              Рено Тракс Восток на всей территории Российской Федерации. В апреле 2013 года ЗАО Вольво Восток
+              инициировала
+              подписание соглашения на развитие взаимоотношений по обслуживанию автомобилей VOLVO, компания
+              ЮРТО-ТРАКЦЕНТР
+              стала первой авторизованной сервисной станцией в России двойного назначения. В январе 2014 года произведен
+              запуск кузовного цеха по восстановлению геометрии рам и кабин грузовиков производства Швеции JOSAM, с
+              наличием покрасочной-сушильной камеры длиной 15 метров итальянского производства TERMOMECANICKA. Общий
+              объем
+              инвестиций в оборудование МКУ составляет более 20 млн. рублей.</p>
+            <a href="#" class="more">подробнее</a>
+            <h4 class="title title--2">Наши обязательства перед клиентами</h4>
+
+            <ul class="advantages">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none">
+                  <path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"
+                    d="M26 21s1.477-2.146 2-3c.792-1.292 2.873-4 6-4h7c2.774 0 6 2.339 6 6v8c0 1.963-2.007 4-4 4h-1" />
+                  <path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"
+                    d="M31 44V22l-3 4M42 21v23M37 32v12M16 44V22l6.164 6.494a2.6 2.6 0 0 0 3.647.002l1.121-1.099S23.302 21.767 22 20c-1.309-1.778-3.77-6-8-6H7c-2.774 0-6 2.283-6 6v8c0 1.993 2.007 4 4 4M5 21v23M11 32v12M11 11c2.331 0 4-1.633 4-4V5c0-2.367-1.669-4-4-4S7 2.633 7 5v2c0 2.367 1.669 4 4 4ZM37 11c2.331 0 4-1.633 4-4V5c0-2.367-1.669-4-4-4s-4 1.633-4 4v2c0 2.367 1.669 4 4 4Z" />
+                </svg>
+                теплый прием
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="42" fill="none">
+                  <path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2"
+                    d="M19 11V1h26v28H19v-7M10 11c2.29 0 4-1.918 4-4.285v-1.43C14 2.919 12.29 1 10 1S6 2.919 6 5.285v1.43C6 9.082 7.71 11 10 11Z" />
+                  <path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2"
+                    d="M15 42V18h6c3.018 0 4-1.781 4-4H6c-3.583 0-5 1.512-5 6v7c0 2.145.855 4 3 4h1M10 28v14M5 20v22M23 23h5l2-4h5l4-10h3" />
+                </svg>
+                соответствие потребностям
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="43" fill="none">
+                  <path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"
+                    d="M10 11c2.331 0 4-1.633 4-4V5c0-2.367-1.669-4-4-4S6 2.633 6 5v2c0 2.367 1.669 4 4 4ZM19 20v-1c0-3.303-5.526-5-9-5s-9 1.697-9 5v9c0 1.945 1.839 4 4 4M15 43V32c2.161 0 4-2.055 4-4v-2M5 21v22M10 31v12M38 11c2.331 0 4-1.633 4-4V5c0-2.367-1.669-4-4-4s-4 1.633-4 4v2c0 2.367 1.669 4 4 4ZM43 43V21M29 26v2c0 1.945 1.839 4 4 4v11M43 32c2.161 0 4-2.055 4-4v-9c0-3.303-5.526-5-9-5s-9 1.697-9 5v1M38 31v12" />
+                  <path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"
+                    d="m14 19-4 4 4 4M34 19l4 4-4 4M10 23h9M38 23h-9M21 23h2M25 23h2" />
+                </svg>понимание и согласие
+              </li>
+
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="39" fill="none">
+                  <path stroke="#EC3C3C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    stroke-width="2"
+                    d="M28 12c0-1.758 1.343-3 3-3s3 1.242 3 3c0 3.183-3 2.817-3 6v.5M31 22v.5M13.999 5.327C6.568 6.737 1 12.547 1 19.5c0 4.602 2.447 8.694 6.25 11.35-.265 2.963-1.059 5.675-1.729 6.992a26.199 26.199 0 0 0 8.004-4.283c1.275.278 2.601.44 3.974.44a18.3 18.3 0 0 0 7.52-1.59" />
+                  <path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"
+                    d="M47 15.5C47 7.492 39.613 1 30.5 1S14 7.492 14 15.5 21.387 30 30.5 30c1.629 0 3.198-.215 4.685-.602a26.18 26.18 0 0 0 8.201 4.443c-.72-1.414-1.574-4.436-1.771-7.647C44.916 23.543 47 19.74 47 15.5Z" />
+                </svg>
+                открытый диалог
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="45" fill="none">
+                  <path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2"
+                    d="M21.621 36.364c7.732 0 14-6.267 14-14 0-7.732-6.268-14-14-14s-14 6.268-14 14 6.268 14 14 14Z" />
+                  <path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2"
+                    d="M20.621 25.364c1.813-1.219 3-2.942 3-5v-1c0-.313.46-1.556.46-2.957 0-3.915-3.46-4.043-3.46-3.043v1c0 2.23-3.333 5-4.286 5h-2.714v9h3c1.381 0 1.057 1 3 1h7.404c.678 0 1.464-.773 1.464-1.45l.975-5.93c.22-1.309-.789-2.62-2.115-2.62h-1.728" />
+                  <path stroke="#EC3C3C" stroke-miterlimit="10" stroke-width="2"
+                    d="M39.693 22.366c4.79-3.28 2.353-10.784-3.45-10.623 1.944-5.472-4.438-10.107-9.039-6.566-1.64-5.57-9.529-5.57-11.17 0-4.602-3.541-10.984 1.096-9.038 6.566-5.804-.16-8.242 7.342-3.452 10.623-4.79 3.282-2.352 10.785 3.452 10.624-1.946 5.471 4.437 10.108 9.037 6.566 1.642 5.57 9.53 5.57 11.171 0 4.602 3.543 10.983-1.095 9.038-6.566 5.804.161 8.241-7.342 3.451-10.624Z" />
+                </svg>
+                качество с первого визита
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="43" fill="none">
+                  <path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"
+                    d="M27 24h4.943c.661 0 1.279.327 1.652.873L37 30c1.125 0 2 .742 2 2.209v3.787a2.003 2.003 0 0 1-2 2.003h-1M18 18h9v20H17M9 38H4" />
+                  <path stroke="#EC3C3C" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"
+                    d="M33 42c1.657 0 3-1.337 3-2.987a2.993 2.993 0 0 0-3-2.987c-1.657 0-3 1.337-3 2.987A2.993 2.993 0 0 0 33 42ZM14.009 42a3.003 3.003 0 0 0 3.009-2.996 3.003 3.003 0 0 0-3.009-2.996A3.002 3.002 0 0 0 11 39.004 3.003 3.003 0 0 0 14.009 42ZM27 38h3M29 30h8M0 29h16M9 24h13M7 24H5M16 18h-2" />
+                  <path stroke="#EC3C3C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    stroke-width="2" d="m38 13-6 3V5" />
+                  <path stroke="#EC3C3C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    stroke-width="2"
+                    d="M17.296 13.021C18.677 6.164 24.735 1 32 1c8.284 0 15 6.716 15 15 0 4.457-1.943 8.459-5.029 11.207" />
+                </svg>
+                первоклассная поставка
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contacts">
+      <div class="wrapper">
+        <div class="contacts__grid">
+          <div class="contacts__left">
+            <hgroup class="title-group">
+              <h2 class="subtitle">Свяжитесь с нами</h2>
+              <p class="title">Контакты</p>
+            </hgroup>
+            <ul class="contacts__list">
+              <li class="contacts__list-item contacts__list-item--mod">
+                <span class="contacts__label address">Адрес:</span>
+                350087, Россия, Краснодарский край, г. Краснодар, Ростовское шоссе 47
+              </li>
+              <li class="contacts__list-item">
+                <span class="contacts__label call">Общий телефон:</span>
+                <a href="tel:88002220409">8 800 222 04 09</a> <small>(бесплатный звонок)</small><br>
+                <a href="tel:+7284049060">+7 (928) 404-90-60</a><br>
+                <a href="tel:+7861259375">+7 (861) 225-93-75</a>
+              </li>
+              <li class="contacts__list-item">
+                <span class="contacts__label human">Отдел продаж:</span>
+                <a href="tel:+79284049020">+7 (928) 404-90-20</a>
+              </li>
+            </ul>
+            <a href="#" class="button">Скачать реквизиты</a>
+          </div>
+          <div class="contacts__right">
+            <div class="contacts__map">
+              <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab11939536940966ee98f263f86575cd38f1013b89877ad9e921d06401bd332ed&amp;width=100%25&amp;height=504&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="departments">
+      <div class="wrapper">
+        <h2 class="title title--2">Контакты</h2>
+      </div>
+      <ul class="departments__list">
+        <li class="departments__item">
+          <h3 class="departments__name">Отдел продажи грузовой техники</h3>
+          <class class="departments__text">
+            <a class="departments__tel" href="tel:+79284049020">+7 (928) 404-90-20</a>
+            <a class="departments__mail" href="mailto:mail@urto-truck.ru">mail@urto-truck.ru</a>
+          </class>
+        </li>
+        <li class="departments__item">
+          <h3 class="departments__name">Отдел сервиса</h3>
+          <class class="departments__text">
+            <a class="departments__tel" href="tel:+79284049020">+7 (928) 404-90-20</a>
+            <a class="departments__mail" href="mailto:mail@urto-truck.ru">mail@urto-truck.ru</a>
+          </class>
+        </li>
+        <li class="departments__item">
+          <h3 class="departments__name">Отдел МКУ - кузовной ремонт</h3>
+          <div class="departments__text">
+            <a class="departments__tel" href="tel:+79284049020">+7 (928) 404-90-20</a>
+            <a class="departments__mail" href="mailto:mail@urto-truck.ru">mail@urto-truck.ru</a>
+          </div>
+        </li>
+        <li class="departments__item">
+          <h3 class="departments__name">Отдел контрактных запчастей</h3>
+          <div class="departments__text">
+            <a class="departments__tel" href="tel:+79284049020">+7 (928) 404-90-20</a>
+            <a class="departments__mail" href="mailto:mail@urto-truck.ru">mail@urto-truck.ru</a>
+          </div>
+
+        </li>
+        <li class="departments__item">
+          <h3 class="departments__name">Отдел по работе с частными клиентами</h3>
+          <div class="departments__text">
+            <a class="departments__tel" href="tel:+79284049020">+7 (928) 404-90-20</a>
+            <a class="departments__mail" href="mailto:mail@urto-truck.ru">mail@urto-truck.ru</a>
+          </div>
+
+        </li>
+        <li class="departments__item">
+          <h3 class="departments__name">Отдел по работе с корпоративными клиентами</h3>
+          <div class="departments__text">
+            <a class="departments__tel" href="tel:+79284049020">+7 (928) 404-90-20</a>
+            <a class="departments__mail" href="mailto:mail@urto-truck.ru">mail@urto-truck.ru</a>
+          </div>
+
+        </li>
+      </ul>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__flex">
+        <div class="footer__logo">
+          <a class="header__logo-link" href="/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="159" height="21" fill="none">
+              <path fill="#EC3C3C"
+                d="M15.668.288c1.53 0 2.819.168 3.864.504 1.064.317 1.913.859 2.548 1.624.653.747 1.13 1.773 1.428 3.08.299 1.288.448 2.903.448 4.844 0 1.941-.15 3.565-.448 4.872-.299 1.288-.775 2.315-1.428 3.08-.635.747-1.484 1.288-2.548 1.624-1.045.317-2.333.476-3.864.476-1.437 0-2.66-.159-3.668-.476-.99-.336-1.783-.877-2.38-1.624-.597-.765-1.036-1.792-1.316-3.08-.28-1.307-.42-2.93-.42-4.872 0-1.941.14-3.556.42-4.844.28-1.307.719-2.333 1.316-3.08.597-.765 1.39-1.307 2.38-1.624 1.008-.336 2.23-.504 3.668-.504ZM4.328.68V20H.016V.68h4.312Zm5.236 7.812v2.996H4.076V8.492h5.488Zm6.104-4.816c-.933 0-1.661.196-2.184.588-.523.392-.896 1.073-1.12 2.044-.205.952-.308 2.296-.308 4.032 0 1.717.103 3.061.308 4.032.224.97.597 1.652 1.12 2.044.523.392 1.25.588 2.184.588.97 0 1.727-.196 2.268-.588.56-.392.943-1.073 1.148-2.044.224-.97.336-2.315.336-4.032 0-1.736-.112-3.08-.336-4.032-.205-.97-.588-1.652-1.148-2.044-.541-.392-1.297-.588-2.268-.588ZM34.698.4c1.792 0 3.201.187 4.228.56 1.026.373 1.754 1.017 2.184 1.932.448.915.672 2.193.672 3.836 0 1.643-.215 2.921-.644 3.836-.41.915-1.092 1.559-2.044 1.932-.952.355-2.24.532-3.864.532-.859 0-1.699-.037-2.52-.112a35.231 35.231 0 0 1-2.296-.28 30.436 30.436 0 0 1-1.82-.336c-.504-.13-.85-.252-1.036-.364l.084-2.128h6.944c.746-.019 1.325-.112 1.736-.28.43-.168.728-.476.896-.924.186-.448.28-1.073.28-1.876 0-.821-.094-1.456-.28-1.904a1.515 1.515 0 0 0-.896-.924c-.41-.187-.99-.28-1.736-.28-1.718 0-3.192.01-4.424.028-1.232.019-2.063.056-2.492.112L27.25.68a34.55 34.55 0 0 1 2.212-.196c.69-.037 1.437-.056 2.24-.056C32.523.409 33.522.4 34.698.4Zm-3.164.28V20H27.25V.68h4.284Zm21.647 0V20h-4.284V.68h4.284Zm5.824 0v3.36H43.101V.68h15.904Zm9.85-.392c1.53 0 2.828.168 3.892.504 1.064.317 1.913.859 2.548 1.624.653.747 1.129 1.773 1.428 3.08.298 1.288.448 2.903.448 4.844 0 1.941-.15 3.565-.448 4.872-.299 1.288-.775 2.315-1.428 3.08-.635.747-1.484 1.288-2.548 1.624-1.064.317-2.362.476-3.892.476-1.531 0-2.828-.159-3.892-.476-1.064-.336-1.923-.877-2.576-1.624-.654-.765-1.13-1.792-1.428-3.08-.299-1.307-.448-2.93-.448-4.872 0-1.941.149-3.556.448-4.844.298-1.307.774-2.333 1.428-3.08.653-.765 1.512-1.307 2.576-1.624 1.064-.336 2.361-.504 3.892-.504Zm0 3.388c-.99 0-1.764.196-2.324.588-.542.392-.934 1.073-1.176 2.044-.224.952-.336 2.296-.336 4.032 0 1.717.112 3.061.336 4.032.242.97.634 1.652 1.176 2.044.56.392 1.334.588 2.324.588.97 0 1.726-.196 2.268-.588.56-.392.952-1.073 1.176-2.044.242-.97.364-2.315.364-4.032 0-1.736-.122-3.08-.364-4.032-.224-.97-.616-1.652-1.176-2.044-.542-.392-1.298-.588-2.268-.588Zm19.613 7.868v2.632h-8.344v-2.632h8.344ZM99.173.68V20H94.89V.68h4.284Zm5.824 0v3.36H89.093V.68h15.904Zm9.9-.28c1.792 0 3.201.187 4.228.56 1.027.373 1.755 1.017 2.184 1.932.448.915.672 2.193.672 3.836 0 1.643-.215 2.921-.644 3.836-.411.915-1.092 1.559-2.044 1.932-.952.355-2.24.532-3.864.532-.859 0-1.699-.037-2.52-.112a35.222 35.222 0 0 1-2.296-.28 30.48 30.48 0 0 1-1.82-.336c-.504-.13-.849-.252-1.036-.364l.084-2.128h6.944c.747-.019 1.325-.112 1.736-.28.429-.168.728-.476.896-.924.187-.448.28-1.073.28-1.876 0-.821-.093-1.456-.28-1.904a1.516 1.516 0 0 0-.896-.924c-.411-.187-.989-.28-1.736-.28-1.717 0-3.192.01-4.424.028-1.232.019-2.063.056-2.492.112l-.42-3.08a34.524 34.524 0 0 1 2.212-.196 41.663 41.663 0 0 1 2.24-.056c.821-.019 1.82-.028 2.996-.028Zm-3.164.28V20h-4.284V.68h4.284Zm22.263 0c.355 0 .663.103.924.308.28.205.467.476.56.812l5.6 18.2h-4.368l-3.948-14.196-.224-.952c-.074-.336-.14-.653-.196-.952h-.756a28.39 28.39 0 0 1-.196.952c-.056.317-.13.635-.224.952L127.22 20h-4.396l5.628-18.2c.094-.336.271-.607.532-.812a1.57 1.57 0 0 1 .952-.308h4.06Zm2.968 11.004v3.22H126.94v-3.22h10.024ZM158.029.68c-.41 1.288-.774 2.417-1.092 3.388a30.674 30.674 0 0 1-.924 2.464c-.298.69-.634 1.27-1.008 1.736a3.93 3.93 0 0 1-1.288 1.064c-.504.243-1.129.41-1.876.504v.168c.784.093 1.438.27 1.96.532a3.759 3.759 0 0 1 1.4 1.092c.411.467.775 1.083 1.092 1.848.336.747.682 1.661 1.036 2.744.355 1.064.766 2.324 1.232 3.78h-4.48a603.858 603.858 0 0 0-1.316-4.144c-.354-1.101-.709-1.97-1.064-2.604-.354-.653-.774-1.12-1.26-1.4-.485-.28-1.11-.42-1.876-.42l-.028-2.968c.728 0 1.335-.15 1.82-.448.486-.317.906-.784 1.26-1.4.355-.635.682-1.437.98-2.408.318-.99.672-2.165 1.064-3.528h4.368Zm-10.64 0v5.46c0 .635-.046 1.27-.14 1.904a9.534 9.534 0 0 1-.448 1.82c.15.579.28 1.176.392 1.792a7.86 7.86 0 0 1 .196 1.68V20h-4.256V.68h4.256Zm2.38 7.784v2.968h-3.472V8.464h3.472Z">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <p class="footer__text">2023 © ООО «Юрто-Трак». Все права защищены.</p>
+        <div class="footer__copyright">Создание сайта - <a href="https://very-good.ru/">
+            Very-good
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none">
+              <path fill="#EC3C3C"
+                d="M3.517 10.994s.62-.069 1.795-2.055c0 0 .027-.035.07-.102.584 2.716 3.389 2.277 3.389 2.277l.27-1.054c-1.885.411-1.91-1.823-1.91-1.823l2.888 1.001c.256-.283.42-.634.488-1.012.027.905-.054 1.88-.316 2.888 0 0 1.745-.669 2.952.496 0 0-.115-2.023-.718-4.114.346-.214 1.086-.529 1.216.587.172 1.464 2.13 3.493 3.965.975 0 0-1.15.668-1.787-.719-.595-1.297-.826-2.998-2.435-2.499.921-.733 1.783-1.92.698-3.023-1.447-1.472-3.702.285-4.1.616-.26-.17-.54-.302-.844-.385 0 0 .93 1.603 1.26 3.918a2.704 2.704 0 0 0-1.333-1.503c-.81-.42-1.886-.344-2.683.217.168-1.401.129-3.278-.45-5.68L3.126 1.473s2.186 4.383.195 7.295c0 0-2.545-1.61-.946-4.864L.744 3.596s-.841.996-.735 2.56c.124 1.808 1.326 4.255 3.508 4.838Zm9.464-7.207c.636.82-.316 1.555-1.143 1.714 0 0-.151-.968-.701-1.599 0 0 1.208-.936 1.844-.115Zm-4.189 2.42c.53.188.818.813.716 1.467l-2.111-.806c.306-.555.88-.846 1.395-.662ZM18.92 8.492h.035c-.313 1.13-.872 1.775-1.569 2.243-1.273.857-2.937.378-2.937.378.375 1.095 4.47 3.15 5.743-.48 1.273-3.63-1.028-6.113-1.028-6.113.119 1.502.072 2.64-.102 3.52-.336.051-2.117.157-1.317-3.589l-1.828-.72s-.913 5.138 3.003 4.761ZM20.24 13.785c-2.169-.548-3.556.154-3.556.154s1.305.428 1.534 2.637c.228 2.21-2.072 3.733-2.072 3.733s2.545.497 4.454-.343c1.909-.838 1.958-2.893 1.958-3.184 0-.292-.147-2.45-2.317-2.997Zm-.548 4.659a.99.99 0 0 1-.114-.002c.332-.359.535-.925.51-1.553-.032-.767-.394-1.41-.886-1.685.112-.042.23-.068.355-.074.765-.034 1.415.68 1.453 1.595.037.915-.553 1.685-1.318 1.719Zm-2.478-1.604c0-1.659-1.298-3.004-2.9-3.004a2.81 2.81 0 0 0-.465.04c-.42-1.078-1.428-1.838-2.606-1.838-1.432 0-2.614 1.123-2.79 2.576-1.243.24-2.586 1.068-3.035 3.409l1.493.36s.298-.872 1.096-1.656l.03.089s.196 2.569-1.787 2.877C4.268 20 3.068 17.715 3.68 16.2c.613-1.516 1.86-1.114 1.86-1.114l2.415-2.38-.906-.394c-2.553-.942-5.84.805-6.036 4.632-.196 3.827 3.891 6.165 6.73 4.213 1.538-1.057 1.84-2.612 1.795-3.815a2.716 2.716 0 0 0 2.07.579c.42 1.124 1.473 1.922 2.706 1.922 1.602 0 2.9-1.344 2.9-3.003Zm-5.347-1.61a3.643 3.643 0 0 0-.081.138 1 1 0 0 1-.825.446.985.985 0 0 1-.651-.248c.202-.033.415-.055.64-.06l-.074-.77s-.367-.117-.914-.175c.085-.499.5-.879 1-.879.56 0 1.015.477 1.015 1.066a1.1 1.1 0 0 1-.11.482Zm1.823 2.485c-.302 0-.574-.138-.762-.357a2.973 2.973 0 0 0 1.068-1.752c.419.136.722.546.722 1.03 0 .596-.46 1.079-1.028 1.079Z" />
+            </svg></a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="./libs/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
