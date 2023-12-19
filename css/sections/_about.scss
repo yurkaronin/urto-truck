@@ -8,11 +8,15 @@
     max-width: 100%;
     width: 100%;
   }
+  &__left {
+    position: relative;
+  }
   &__image {
     max-width: 100%;
     width: 100%;
     object-fit: cover;
     height: 100%;
+    position: absolute;
   }
   .title {
     color: inherit;
@@ -36,5 +40,23 @@
   }
   .title--2 {
     margin-bottom: 32px;
+  }
+
+  @media (max-width: 1439px) {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .about__image {
+      height: 464px;
+      position: initial;
+    }
+    .wrapper {
+      padding-inline: 40px;
+    }
+  }
+  @media (max-width: 767px) {
+    .wrapper {
+      padding-inline: 20px;
+    }
   }
 }

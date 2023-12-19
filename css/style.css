@@ -13,6 +13,7 @@
   --Text: #656565;
   --Mod1: rgba(255, 255, 255, 0.1);
   --Mod2: rgba(0, 0, 0, 0.8);
+  --Mod3: rgba(255, 255, 255, 0.2);
 }
 
 html {
@@ -908,6 +909,74 @@ input[type=radio].visually-hidden {
   }
 }
 
+.advantages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: calc(100% + 80px + 80px);
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--Mod3);
+  margin-left: -80px;
+  margin-right: -80px;
+}
+.advantages li {
+  padding: 30px 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--Mod3);
+  border-bottom: 1px solid var(--Mod3);
+  color: var(--White, #fff);
+  font-family: var(--Exo);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.advantages li:nth-child(3n) {
+  border-right: none;
+}
+.advantages svg {
+  display: block;
+  max-width: 50px;
+  margin-bottom: 12px;
+}
+@media (max-width: 1439px) {
+  .advantages {
+    width: calc(100% + 40px + 40px);
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+@media (max-width: 1023px) {
+  .advantages li {
+    justify-content: flex-start;
+    padding: 30px 40px 32px;
+  }
+  .advantages svg {
+    margin-bottom: 21px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages {
+    width: calc(100% + 20px + 20px);
+    margin-left: -20px;
+    margin-right: -20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .advantages li {
+    padding: 20px 20px 16px;
+  }
+  .advantages li:nth-child(3n) {
+    border-right: 1px solid var(--Mod3);
+  }
+  .advantages li:nth-child(2n) {
+    border-right: none;
+  }
+}
+
 .header {
   background-color: var(--White);
   transition: all 0.6s;
@@ -1521,11 +1590,15 @@ input[type=radio].visually-hidden {
   max-width: 100%;
   width: 100%;
 }
+.about__left {
+  position: relative;
+}
 .about__image {
   max-width: 100%;
   width: 100%;
   object-fit: cover;
   height: 100%;
+  position: absolute;
 }
 .about .title {
   color: inherit;
@@ -1548,6 +1621,23 @@ input[type=radio].visually-hidden {
 }
 .about .title--2 {
   margin-bottom: 32px;
+}
+@media (max-width: 1439px) {
+  .about__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about .about__image {
+    height: 464px;
+    position: initial;
+  }
+  .about .wrapper {
+    padding-inline: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .about .wrapper {
+    padding-inline: 20px;
+  }
 }
 
 .footer {
