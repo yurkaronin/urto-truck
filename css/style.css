@@ -2162,6 +2162,26 @@ input[type=radio].visually-hidden {
   display: block;
 }
 
+.services-cost__grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+}
+.services-cost__table table {
+  border-collapse: collapse;
+}
+.services-cost__table th {
+  color: var(--White, #fff);
+  font-family: var(--Inter);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.14px;
+  background: var(--Dark, #3a3a3a);
+  padding: 15px 20px;
+}
+
 .footer {
   background-color: var(--Dark);
   color: var(--LightGrey);
