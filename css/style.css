@@ -923,6 +923,10 @@ input[type=radio].visually-hidden {
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
+  transition: all 0.3s;
+}
+.advantages li:hover, .advantages li:active, .advantages li:focus {
+  background-color: var(--Black);
 }
 .advantages li:nth-child(3n) {
   border-right: none;
@@ -2561,10 +2565,6 @@ input[type=radio].visually-hidden {
   grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
 }
-.services-cost__table {
-  max-width: 100%;
-  overflow: auto;
-}
 .services-cost__table table {
   border-collapse: collapse;
 }
@@ -2578,7 +2578,10 @@ input[type=radio].visually-hidden {
   background: var(--Dark, #3a3a3a);
   padding: 15px 20px;
   text-align: left;
-  width: 150px;
+  min-width: 150px;
+}
+.services-cost__table th:first-of-type {
+  min-width: 310px;
 }
 .services-cost__table td {
   color: var(--Text, #656565);
@@ -2587,8 +2590,11 @@ input[type=radio].visually-hidden {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.16px;
-  padding: 15px 20px;
-  width: 150px;
+  padding: 10px 20px;
+  min-width: 150px;
+}
+.services-cost__table td:first-of-type {
+  min-width: 310px;
 }
 .services-cost__table td:nth-child(3) {
   color: var(--Black, #000);
@@ -2622,16 +2628,7 @@ input[type=radio].visually-hidden {
     max-width: 100%;
   }
   .services-cost__table table {
-    min-width: 100%;
-  }
-}
-@media (max-width: 1023px) {
-  .services-cost__table {
-    overflow: scroll;
-    max-width: 100%;
-  }
-  .services-cost__table table {
-    min-width: max-content;
+    margin: 0 auto;
   }
 }
 
