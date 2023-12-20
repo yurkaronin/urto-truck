@@ -1,0 +1,18 @@
+.truck-card {
+  padding: 30px 0;
+  margin-top: 105px;
+  .cust-slider {
+    margin-bottom: 40px;
+  }
+  .title--2 {
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: 1023px) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 56px;
+  }
+}

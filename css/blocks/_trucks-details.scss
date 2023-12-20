@@ -1,0 +1,63 @@
+.trucks-details {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 32px;
+
+    li {
+      border-bottom: 1px solid var(--LightGrey);
+      color: var(--Text, #656565);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.16px;
+      padding: 10px 0;
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(2, 1fr);
+
+      b {
+        color: var(--Dark, #3a3a3a);
+        font-weight: 700;
+      }
+    }
+  }
+  &__price {
+    color: var(--Gray-2);
+    font-family: var(--Exo);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    .button {
+      max-width: max-content;
+    }
+  }
+  &__footer {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    &__list li {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 4px;
+    }
+    &__footer {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+    &__flex {
+      gap: 20px;
+    }
+  }
+
+
+}

@@ -10,6 +10,9 @@
     .contacts__list {
       grid-template-columns: 1fr;
     }
+    .contacts__list-item {
+      color: var(--White);
+    }
   }
   &__grid {
     display: grid;
