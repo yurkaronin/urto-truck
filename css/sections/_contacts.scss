@@ -24,7 +24,12 @@
     gap: 25px 32px;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 30px;
+    &--mod {
+      grid-template-columns: repeat(4, 1fr);
+      align-items: flex-start;
+    }
   }
+
   &__list-item {
     color: var(--Gray-2);
     font-size: 18px;
@@ -84,9 +89,12 @@
         order: initial;
       }
     }
+    &__list--mod {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   @media (max-width: 767px) {
-    padding-top:35px !important;
+    padding-top: 35px !important;
     &__list {
       gap: 16px;
       grid-template-columns: repeat(1, 1fr);
@@ -98,7 +106,8 @@
     .button {
       margin-left: auto;
     }
+    &__list--mod .button {
+      margin-left: initial;
+    }
   }
 }
-
-
