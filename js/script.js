@@ -66,35 +66,35 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // СЛАЙДЕР ГЛАВНАЯ ПЕРВЫЙ ЭКРАН
-    // Инициализация миниатюрного слайдера
-    var swiperThumbs = new Swiper('.js-slider-home-first .hero-home__thumbs', {
-      // Общие параметры
-      slidesPerView: 4,
-      spaceBetween: 0,
-      freeMode: true,
-      watchSlidesProgress: true,
-      autoHeight: true,
-      // Параметры для разных точек останова
-      breakpoints: {
-        // Когда ширина экрана меньше или равна 1023px
-        1023: {
-          direction: 'horizontal', // Горизонтальная ориентация
-          autoHeight: false,
-          slidesPerView: 'auto', // Автоматическое определение количества слайдов
-        }
+  // Инициализация миниатюрного слайдера
+  var swiperThumbs = new Swiper('.js-slider-home-first .hero-home__thumbs', {
+    // Общие параметры
+    slidesPerView: 4,
+    spaceBetween: 0,
+    freeMode: true,
+    watchSlidesProgress: true,
+    autoHeight: true,
+    // Параметры для разных точек останова
+    breakpoints: {
+      // Когда ширина экрана меньше или равна 1023px
+      1023: {
+        direction: 'horizontal', // Горизонтальная ориентация
+        autoHeight: false,
+        slidesPerView: 'auto', // Автоматическое определение количества слайдов
       }
-    });
-    // Инициализация основного слайдера
-    var swiperHero = new Swiper(".js-slider-home-first .hero-home__slider", {
-      loop: true,
-      navigation: {
-        nextEl: ".js-slider-home-first .swiper-button-next",
-        prevEl: ".js-slider-home-first .swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiperThumbs
-      }
-    });
+    }
+  });
+  // Инициализация основного слайдера
+  var swiperHero = new Swiper(".js-slider-home-first .hero-home__slider", {
+    loop: true,
+    navigation: {
+      nextEl: ".js-slider-home-first .swiper-button-next",
+      prevEl: ".js-slider-home-first .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiperThumbs
+    }
+  });
   // КОНЕЦ СЛАЙДЕР ГЛАВНАЯ ПЕРВЫЙ ЭКРАН
 
   // МЕГА СЛАЙДЕР
@@ -160,6 +160,47 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // Кастомные селекты
+  var customSelects = document.querySelectorAll(".custom-select");
+
+  customSelects.forEach(function (select) {
+    var selected = select.querySelector(".custom-select__selected");
+    var options = select.querySelector(".custom-select__options");
+
+    selected.addEventListener("click", function () {
+      select.classList.toggle("open");
+    });
+
+    var selectOptions = options.querySelectorAll(".custom-select__option");
+    selectOptions.forEach(function (option) {
+      option.addEventListener("click", function () {
+        var value = this.getAttribute("data-value");
+        selected.textContent = this.textContent;
+        select.classList.remove("open");
+        var input = select.querySelector("input[type=hidden]");
+        input.value = value;
+      });
+    });
+
+    var defaultValue = select.getAttribute("data-default");
+    if (defaultValue) {
+      selected.textContent = defaultValue;
+      var defaultOption = options.querySelector('.custom-select__option[data-value="' + defaultValue + '"]');
+      if (defaultOption) {
+        var defaultOptionValue = defaultOption.getAttribute("data-value");
+        var input = select.querySelector("input[type=hidden]");
+        input.value = defaultOptionValue;
+      }
+    }
+
+    document.addEventListener("click", function (event) {
+      if (!select.contains(event.target)) {
+        select.classList.remove("open");
+      }
+    });
+  });
+  // Кастомные селекты конец
 
 
   // //   // слайдер c карточками

@@ -1,4 +1,16 @@
 .contacts {
+  &--mod {
+    background-color: var(--Dark);
+    color: var(--White);
+    padding-top: 70px !important;
+
+    .title {
+      color: inherit;
+    }
+    .contacts__list {
+      grid-template-columns: 1fr;
+    }
+  }
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -67,8 +79,14 @@
     &__left {
       order: 2;
     }
+    &--mod {
+      .contacts__left {
+        order: initial;
+      }
+    }
   }
   @media (max-width: 767px) {
+    padding-top:35px !important;
     &__list {
       gap: 16px;
       grid-template-columns: repeat(1, 1fr);
@@ -82,3 +100,5 @@
     }
   }
 }
+
+

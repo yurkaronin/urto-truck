@@ -1,0 +1,53 @@
+.catalog-filter {
+  margin-bottom: 48px;
+  &__grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__label {
+    display: block;
+    color: var(--Gray-2);
+    font-family: var(--Inter);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  &__input {
+    border: 1px solid var(--Mod4);
+    background: var(--White);
+    color: var(--Grey);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    padding: 10px 20px;
+  }
+  &__range-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 1439px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item--mod {
+      grid-column: span 2;
+    }
+  }
+  @media (max-width: 767px) {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item--mod {
+      grid-column: initial;
+    }
+    &__range-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
