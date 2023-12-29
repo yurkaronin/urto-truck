@@ -1,0 +1,136 @@
+.pagination {
+  margin-top: 72px;
+  margin-bottom: 40px;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+  }
+  li:not(:last-of-type) &__link {
+    margin-right: 32px;
+  }
+  &__link {
+    border-radius: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    max-width: initial;
+    display: flex;
+    background-color: var(--White);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--LightGrey);
+    &::before {
+      background-color: var(--Red);
+    }
+    span {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+      color: var(--Dark);
+      text-align: center;
+      font-family: var(--Inter);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1;
+      transition: all 0.3s;
+    }
+    svg {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+      width: 27px;
+      object-fit: contain;
+      transition: all 0.3s;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--Over);
+      border-color: var(--Over);
+      color: var(--White);
+      span {
+        color: inherit;
+      }
+    }
+  }
+  &__link.current {
+    border-color: var(--Dark);
+  }
+  &__link--next,
+  &__link--prev {
+    background-color: var(--Red);
+    color: var(--White);
+    border-color: var(--Red);
+    transition: all 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--Over);
+      border-color: var(--Over);
+
+      svg {
+        scale: 1.2;
+      }
+    }
+  }
+  &__link.current {
+    pointer-events: none;
+    &::before {
+      background-color: var(--LightBlue);
+    }
+  }
+  .dotted {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--hide {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    &__link {
+      width: 50px;
+      height: 50px;
+    }
+    li:not(:last-of-type) &__link {
+      margin-right: 16px;
+    }
+    &__link span {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__link {
+      width: 40px;
+      height: 40px;
+    }
+    li:not(:last-of-type) &__link {
+      margin-right: 6px;
+    }
+    &__link span {
+      font-size: 14px;
+    }
+    &__link svg {
+      scale: 0.8;
+    }
+
+    &__link:hover,
+    &__link:active,
+    &__link:focus {
+      svg {
+        scale: 1;
+      }
+    }
+  }
+}

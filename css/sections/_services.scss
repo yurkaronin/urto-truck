@@ -1,0 +1,22 @@
+.services {
+  &--first .hero-home--mod .hero-home__slider {
+    height: 100%;
+  }
+  &--first .hero-home {
+    position: relative;
+    height: calc(100vh - 105px);
+    margin-top: 105px;
+  }
+  @media (max-width: 1023px) {
+    &--first .hero-home {
+      height: calc(100vh - 120px);
+      margin-top: 120px;
+    }
+  }
+  @media (max-width: 767px) {
+    &--first .hero-home {
+      height: initial;
+      margin-top: 56px;
+    }
+  }
+}

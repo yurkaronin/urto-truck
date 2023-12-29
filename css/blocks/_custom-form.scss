@@ -16,6 +16,27 @@
 
 .custom-form__input:hover {
   border: 1px solid var(--White);
+  *::placeholder {
+    color: var(--Black);
+  }
+}
+.custom-form__input:focus-within {
+  border: 1px solid var(--Dark);
+  &::placeholder {
+    color: var(--Black);
+  }
+}
+.custom-form__input:has(input:user-invalid) {
+  border: 1px solid var(--Red);
+  &::placeholder {
+    color: red;
+  }
+}
+.custom-form__input:has(textarea:user-invalid) {
+  border: 1px solid var(--Red);
+  &::placeholder {
+    color: red;
+  }
 }
 
 .custom-form__input:has(input:active),
@@ -78,7 +99,6 @@
 }
 
 .custom-form input {
-  // border-radius: 2px;
   background: var(--White);
   max-width: 100%;
   width: 100%;
@@ -96,7 +116,6 @@
 }
 
 .custom-form textarea {
-  // border-radius: 2px;
   background: var(--White);
   max-width: 100%;
   width: 100%;
@@ -122,7 +141,7 @@
   font-weight: 400;
 
   a {
-    color: var(--White, #FFF);
+    color: var(--White, #fff);
   }
 }
 
@@ -147,5 +166,8 @@
     .button {
       margin-left: initial !important;
     }
+  }
+  .custom-form textarea {
+    height: 46px;
   }
 }

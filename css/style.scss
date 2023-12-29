@@ -34,6 +34,7 @@
 @import "blocks/catalog-filter";
 @import "blocks/trucks-details";
 @import "blocks/to-the-back";
+@import "blocks/pagination";
 
 @import "sections/header";
 @import "sections/hero-home";
@@ -47,6 +48,8 @@
 @import "sections/companies";
 @import "sections/services-cost";
 @import "sections/truck-card";
+@import "sections/services";
+@import "sections/modal";
 
 @import "sections/footer";
 
@@ -54,7 +57,7 @@
 // @import "pages/catalog";
 // @import "pages/product";
 
-// @import "activity/modal-show";
+@import "activity/modal-show";
 
 // @import "pages/search-page";
 

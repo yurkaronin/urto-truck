@@ -1,5 +1,14 @@
 # urto-truck
 
-Посмотреть вёрстку тут: https://yurkaronin.github.io/urto-truck/
+[Посмотреть вёрстку](https://yurkaronin.github.io/urto-truck/)
+[Макет](https://www.figma.com/file/mKW4ffmV3iTFjzlL23THnN/URTO-(Copy)?type=design&node-id=251%3A2759&mode=dev)
+[Технический домен](https://urto-truck.tw1.ru/)
 
-Макет тут: https://www.figma.com/file/mKW4ffmV3iTFjzlL23THnN/URTO-(Copy)?type=design&node-id=251%3A2759&mode=dev
+## Что новенького:
+
+1. Добавил стили для анонсов статей при наведении
+2. Заменил favicon (взял с тех домена)
+3. Добавил новую страницу для списка услуг (разводящая) `services-all.html`
+4. Добавил новую страницу со списком статей и пагинацией `news-and-promo.html`
+5. Добавил диалоговые окна с базовой валидацией на страницу `truck.html`. ВАЖНО! там при успешной отправке должна показываться модалка с уведомлением. Если что - подправь под себя блок скриптов с логикой показа в main.js
+6. Добавил недостающие слайды на главной странице в самом первом слайдере

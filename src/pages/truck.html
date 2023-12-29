@@ -40,8 +40,8 @@
               </div>
               <div class="trucks-details__right">
                 <div class="trucks-details__flex">
-                  <a class="button" href="#">Купить</a>
-                  <a class="button" href="#">рассчитать лизинг</a>
+                  <a class="button" href="#" data-target="modal-call-back">Купить</a>
+                  <a class="button" href="#" data-target="modal-calculate-the-lease">рассчитать лизинг</a>
                 </div>
               </div>
             </div>
@@ -266,6 +266,129 @@
       </div>
     </div>
   </footer>
+
+  <!-- Диалоговое окно Купить -->
+  <section class="modal" id="modal-call-back">
+    <div class="wrapper">
+
+      <div class="modal__body">
+        <hgroup class="title-group">
+          <p class="subtitle">Заполните простую форму и наши специалисты свяжутся с Вами в ближайшее время</p>
+          <h2 class="title">Купить C7H-6X4 ТЯГАЧ, MC11.32-40</h2>
+        </hgroup>
+
+
+        <form action="" class="custom-form">
+
+          <div class="custom-form__group">
+            <div class="custom-form__input">
+              <input type="text" name="user-name" id="user-name" placeholder="Представьтесь пожалуйста" required>
+            </div>
+          </div>
+          <div class="custom-form__group">
+            <div class="custom-form__input">
+              <input type="tel" name="user-phone" id="user-phone" placeholder="Для связи с вами" required>
+            </div>
+          </div>
+
+          <div class="custom-form__footer">
+            <div class="custom-form__check">
+              <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent" checked required>
+              <label class="custom-form__consent" for="user-consent">Я выражаю согласие с <a href="#">Политикой
+                  конфиденциальности </a> сайта</label>
+            </div>
+
+            <button class="button" type="submit">Отправить</button>
+          </div>
+
+        </form>
+        <button class="modal__close js-close-modal" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"><path stroke="#fff" stroke-width="2" d="m1 1 15 15M16 1 1 16"/></svg>
+        </button>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Диалоговое окно Расчитать лизинг -->
+  <section class="modal" id="modal-calculate-the-lease">
+    <div class="wrapper">
+
+      <div class="modal__body">
+        <hgroup class="title-group">
+          <p class="subtitle">Заполните простую форму и наши специалисты свяжутся с Вами в ближайшее время</p>
+          <h2 class="title">рассчитать лизинг</h2>
+        </hgroup>
+
+
+        <form action="" class="custom-form">
+
+          <div class="custom-form__group">
+            <div class="custom-form__input">
+              <input type="text" name="user-name" id="user-name" placeholder="Представьтесь пожалуйста" required>
+            </div>
+          </div>
+          <div class="custom-form__group">
+            <div class="custom-form__input">
+              <input type="tel" name="user-phone" id="user-phone" placeholder="Для связи с вами" required>
+            </div>
+          </div>
+          <div class="custom-form__group">
+            <div class="custom-form__input">
+              <input type="email" name="user-mail" id="user-mail" placeholder="E-mail" required>
+            </div>
+          </div>
+          <div class="custom-form__item">
+            <div class="custom-form__group">
+              <div class="custom-form__input">
+                <textarea id="user-message" cols="30" rows="10" placeholder="Комментарий" required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-form__footer">
+            <div class="custom-form__check">
+              <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent" checked required>
+              <label class="custom-form__consent" for="user-consent">Я выражаю согласие с <a href="#">Политикой
+                  конфиденциальности </a> сайта</label>
+            </div>
+
+            <button class="button" type="submit">Отправить</button>
+          </div>
+
+        </form>
+        <button class="modal__close js-close-modal" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"><path stroke="#fff" stroke-width="2" d="m1 1 15 15M16 1 1 16"/></svg>
+        </button>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Диалоговое окно СПАСИБО -->
+  <section class="modal" id="successModal">
+    <div class="wrapper">
+
+      <div class="modal__body">
+        <hgroup class="title-group">
+          <p class="subtitle">Спасибо, наш специалист свяжется с Вами в ближайшее время</p>
+          <h2 class="title">Запрос отправлен</h2>
+
+        </hgroup>
+        <br>
+
+        <button class="button js-close-modal" type="button">закрыть</button>
+
+        <button class="modal__close js-close-modal" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"><path stroke="#fff" stroke-width="2" d="m1 1 15 15M16 1 1 16"/></svg>
+        </button>
+      </div>
+
+
+    </div>
+  </section>
   @@include('src/blocks/scripts-include.html')
 </body>
 

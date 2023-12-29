@@ -203,214 +203,101 @@ document.addEventListener("DOMContentLoaded", () => {
   // Кастомные селекты конец
 
 
-  // Подключаем янекс карту на сайт
-  // if (document.querySelector('.js-map')) {
-  //   let center = [45.047739, 38.875191];
+  // Работа с модальными окнами
+  const handleClickOrTouch = (element, callback) => {
+    const touchendListener = (e) => {
+      e.preventDefault();
+      element.removeEventListener('touchend', touchendListener);
+      callback(e);
+    };
 
-  //   function init() {
-  //     let mapElement = document.querySelector('.js-map');
-  //     let map = new ymaps.Map(mapElement, {
-  //       center: center,
-  //       zoom: 15
-  //     });
+    element.addEventListener('click', callback);
+    element.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      element.addEventListener('touchend', touchendListener);
+    });
+  };
 
-  //     let placeMark = new ymaps.Placemark([45.047739, 38.875191], {
-  //       hintContent: 'Средства защиты растений',
-  //       balloonContentHeader: '«БАИС-ЮГ»',
-  //       balloonContentFooter: 'г. Краснодар,ул. ВНИИБЗР, 1'
-  //     }, {
-  //       iconLayout: 'default#image',
-  //       iconImageHref: './img/map/balun-1.svg',
-  //       iconImageSize: [95, 95],
-  //       iconImageOffset: [-19, -44]
-  //     });
+  const setupBodyClickListener = () => {
+    document.removeEventListener('click', bodyClickListener);
 
-  //     map.controls.remove('geolocationControl');
-  //     map.controls.remove('searchControl');
-  //     map.controls.remove('trafficControl');
-  //     map.controls.remove('typeSelector');
-  //     map.behaviors.disable(['scrollZoom']);
+    function bodyClickListener(event) {
+      let activeModal = document.querySelector('.modal.active');
+      if (activeModal && (!event.target.closest('.modal__body') || event.target.closest('.js-close-modal'))) {
+        activeModal.classList.remove('active');
+        document.removeEventListener('click', bodyClickListener);
+      }
+    }
 
-  //     map.geoObjects.add(placeMark);
+    document.addEventListener('click', bodyClickListener);
+  };
 
-  //     placeMark.events.add('mouseenter', function (e) {
-  //       e.get('target').options.set('iconImageHref', './img/map/balun-1.svg');
-  //     });
+  let showDialogButtons = document.querySelectorAll('[data-target]');
+  showDialogButtons.forEach(button => {
+    handleClickOrTouch(button, function (event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-  //     placeMark.events.add('mouseleave', function (e) {
-  //       e.get('target').options.set('iconImageHref', './img/map/balun-1.svg');
-  //     });
-  //   }
+      let targetClass = event.currentTarget.getAttribute('data-target');
+      let modal = document.getElementById(targetClass);
 
-  //   ymaps.ready(init);
-  // };
-
-  // Кастомная карта SVG
-  // var customMap = document.querySelector('.custom-map');
-
-  // Проверка наличия блока .custom-map
-  // if (customMap) {
-  //   var hints = customMap.querySelectorAll('.custom-map__hints-item');
-  //   var icons = customMap.querySelectorAll('.custom-map__icon');
-
-  //   // Делаем первые элементы активными
-  //   if (hints.length > 0) {
-  //     hints[0].classList.add('active');
-  //   }
-  //   if (icons.length > 0) {
-  //     icons[0].classList.add('active');
-  //   }
-
-  //   // Обработка кликов по иконкам
-  //   icons.forEach(function (icon) {
-  //     icon.addEventListener('click', function () {
-  //       // Удаляем активные классы у всех элементов
-  //       hints.forEach(function (hint) {
-  //         hint.classList.remove('active');
-  //       });
-  //       icons.forEach(function (el) {
-  //         el.classList.remove('active');
-  //       });
-
-  //       // Добавляем активный класс к текущему элементу
-  //       this.classList.add('active');
-
-  //       // Находим и активируем соответствующую подсказку
-  //       var correspondingHint = customMap.querySelector('.custom-map__hints-item[data-name="' + this.id + '"]');
-  //       if (correspondingHint) {
-  //         correspondingHint.classList.add('active');
-  //       }
-  //     });
-  //   });
-
-  //   // Обработка кликов вне иконок
-  //   customMap.addEventListener('click', function (event) {
-  //     if (!event.target.closest('.custom-map__icon')) {
-  //       hints.forEach(function (hint) {
-  //         hint.classList.remove('active');
-  //       });
-  //       icons.forEach(function (icon) {
-  //         icon.classList.remove('active');
-  //       });
-  //     }
-  //   });
-  // }
-
-  // Простой аккордеон
-  // const titles = document.querySelectorAll('.accordion__title');
-  // Функция для закрытия всех аккордеонов
-  // function closeAllAccordions() {
-  //   titles.forEach(otherTitle => {
-  //     otherTitle.classList.remove('active');
-  //     otherTitle.nextElementSibling.style.maxHeight = null;
-  //   });
-  // }
-  // Инициализация первого аккордеона как активного
-  // if (titles.length > 0) {
-  //   titles[0].classList.add('active');
-  //   titles[0].nextElementSibling.style.maxHeight = titles[0].nextElementSibling.scrollHeight + "px";
-  // }
-  // Прослушивание кликов на всех заголовках аккордеонов
-  // titles.forEach(title => {
-  //   title.addEventListener('click', () => {
-  //     const accordionBody = title.nextElementSibling;
-  //     const isActive = title.classList.contains('active');
-  //     closeAllAccordions(); // Сначала закрываем все аккордеоны
-  //     // Затем переключаем состояние нажатого аккордеона
-  //     if (!isActive) {
-  //       title.classList.add('active');
-  //       accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-  //     }
-  //   });
-  // });
-
-  // Работа с формами
-  // const handleClickOrTouch = (element, callback) => {
-  //   const touchendListener = (e) => {
-  //     e.preventDefault();
-  //     element.removeEventListener('touchend', touchendListener);
-  //     callback(e);
-  //   };
-
-  //   element.addEventListener('click', callback);
-  //   element.addEventListener('touchstart', (e) => {
-  //     e.preventDefault();
-  //     element.addEventListener('touchend', touchendListener);
-  //   });
-  // };
-
-  // const setupBodyClickListener = () => {
-  //   document.removeEventListener('click', bodyClickListener);
-
-  //   function bodyClickListener(event) {
-  //     let activeModal = document.querySelector('.modal.active');
-  //     if (activeModal && (!event.target.closest('.modal__body') || event.target.closest('.js-close-modal'))) {
-  //       activeModal.classList.remove('active');
-  //       document.removeEventListener('click', bodyClickListener);
-  //     }
-  //   }
-
-  //   document.addEventListener('click', bodyClickListener);
-  // };
-
-  // let showDialogButtons = document.querySelectorAll('[data-target]');
-  // showDialogButtons.forEach(button => {
-  //   handleClickOrTouch(button, function (event) {
-  //     event.preventDefault();
-  //     event.stopPropagation();
-
-  //     let targetClass = event.currentTarget.getAttribute('data-target');
-  //     let modal = document.getElementById(targetClass);
-
-  //     if (modal) {
-  //       modal.classList.add('active');
-  //       setupBodyClickListener();
-  //     }
-  //   });
-  // });
+      if (modal) {
+        modal.classList.add('active');
+        setupBodyClickListener();
+      }
+    });
+  });
 
   // Закрытие активного модального окна
-  // const closeActiveModal = () => {
-  //   let activeModal = document.querySelector('.modal.active');
-  //   if (activeModal) {
-  //     activeModal.classList.remove('active');
-  //   }
-  // };
+  const closeActiveModal = () => {
+    let activeModal = document.querySelector('.modal.active');
+    if (activeModal) {
+      activeModal.classList.remove('active');
+    }
+  };
 
   // Показать модальное окно с сообщением об успешной отправке
-  // const showSuccessModal = () => {
-  //   let successModal = document.getElementById('successModal');
-  //   if (successModal) {
-  //     successModal.classList.add('active');
-  //     setupBodyClickListener();
-  //   }
-  // };
+  const showSuccessModal = () => {
+    let successModal = document.getElementById('successModal');
+    if (successModal) {
+      successModal.classList.add('active');
+      setupBodyClickListener();
+    }
+  };
 
   // Настройки маски для телефона
-  // const maskOptions = {
-  //   mask: '+{7}(000)000-00-00'
-  // };
+  const maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
 
   // Находим все элементы ввода с типом 'tel'
-  // const phoneInputs = document.querySelectorAll('input[type="tel"]');
-  // phoneInputs.forEach(input => {
-  //   const maskInstance = IMask(input, maskOptions);
-  //   input.setAttribute('pattern', '\\+7\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}');
-  //   input.setAttribute('title', 'Номер телефона должен содержать 11 цифр');
+  const phoneInputs = document.querySelectorAll('input[type="tel"]');
+  phoneInputs.forEach(input => {
+    IMask(input, maskOptions);
+    input.setAttribute('pattern', '\\+7\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}');
+    input.setAttribute('title', 'Номер телефона должен содержать 11 цифр');
+  });
 
-  //   function checkValue() {
-  //     // Проверяем, есть ли что-то кроме маски
-  //     if (maskInstance.unmaskedValue) {
-  //       input.classList.add('has-value');
-  //     } else {
-  //       input.classList.remove('has-value');
-  //     }
-  //   }
+  // Находим все формы на странице
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
 
-  //   // Проверяем значение при потере фокуса и вводе данных
-  //   input.addEventListener('blur', checkValue);
-  //   input.addEventListener('input', checkValue);
-  // });
+      // Проверка валидации формы перед отправкой
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+      }
+
+      // Закрытие текущего модального окна
+      closeActiveModal();
+
+      // Показать модальное окно с сообщением об успешной отправке
+      showSuccessModal();
+    });
+  });
 
 
 });

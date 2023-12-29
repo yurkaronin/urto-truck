@@ -1,4 +1,7 @@
 .articles {
+  &--first {
+    margin-top: 105px;
+  }
   &__list {
     margin: 0;
     padding: 0;
@@ -7,11 +10,27 @@
     gap: 32px;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  &__link {
+    text-decoration: none;
+
+    &:active,
+    &:hover,
+    &:focus {
+      .articles__image {
+        scale: 1.02;
+      }
+      .articles__title {
+        color: var(--Over);
+      }
+    }
+  }
   &__image {
     display: block;
     max-width: 100%;
     width: 100%;
     margin-bottom: 22px;
+    transition: scale 0.3s;
   }
   &__group {
     display: grid;
@@ -40,6 +59,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 1.33;
+    transition: color 0.3s;
   }
   &__date {
     color: var(--Grey);
@@ -66,7 +86,15 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  @media (max-width: 1023px) {
+    &--first {
+      margin-top: 120px;
+    }
+  }
   @media (max-width: 767px) {
+    &--first {
+      margin-top: 56px;
+    }
     &__list {
       grid-template-columns: repeat(1, 1fr);
     }
